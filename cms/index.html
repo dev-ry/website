@@ -19,14 +19,26 @@
         }
       }
     </style>
+
+    <!-- 👇 This flag delays automatic CMS init so we can control it -->
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
   </head>
   <body>
-    <!-- Include the script that builds the page and powers Decap CMS -->
+    <!-- Optional Logo -->
     <img
       src="/prosper-website-logo.png"
       alt="Prosper XO"
       class="logo"
     />
+
+    <!-- Decap CMS Script -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+    <!-- 👇 Manually trigger CMS init -->
+    <script>
+      CMS.init();
+    </script>
   </body>
 </html>
