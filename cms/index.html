@@ -20,36 +20,31 @@
       }
     </style>
 
-    <!-- 👇 This flag delays automatic CMS init so we can control it -->
     <script>
+      // ✅ Normalize invite_token hash BEFORE CMS loads
+      (function normalizeInviteToken() {
+        const hash = window.location.hash;
+        if (hash.startsWith("#/invite_token=")) {
+          const fixedHash = "#" + hash.slice(2);
+          history.replaceState(null, null, fixedHash);
+        }
+      })();
+
       window.CMS_MANUAL_INIT = true;
     </script>
   </head>
   <body>
-    <!-- Optional Logo -->
     <img
       src="/prosper-website-logo.png"
       alt="Prosper XO"
       class="logo"
     />
 
-    <!-- Decap CMS Script -->
     <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js"></script>
 
     <script>
-      function normalizeInviteToken() {
-        const hash = window.location.hash;
-
-        // Fix cases like "#/invite_token=abc123" → "#invite_token=abc123"
-        if (hash.startsWith("#/invite_token=")) {
-          const fixedHash = "#" + hash.slice(2);
-          history.replaceState(null, null, fixedHash);
-        }
-      }
-
       function waitForCMS() {
         if (typeof CMS !== "undefined") {
-          normalizeInviteToken();
           CMS.init();
         } else {
           setTimeout(waitForCMS, 50);
@@ -58,6 +53,6 @@
 
       document.addEventListener("DOMContentLoaded", waitForCMS);
     </script>
-
   </body>
 </html>
+
