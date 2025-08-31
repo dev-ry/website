@@ -9,7 +9,7 @@
 
     <!-- 👇 Delay CMS auto init -->
     <script>
-      // window.CMS_MANUAL_INIT = true;
+      window.CMS_MANUAL_INIT = true;
 
       // function fixInviteToken() {
       //   const hash = window.location.hash;
@@ -33,16 +33,17 @@
     <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js"></script>
 
     <!-- 👇 Manually init CMS -->
-    <!-- <script>
-      function waitForCMS() {
-        if (typeof CMS !== "undefined") {
-          CMS.init();
-        } else {
-          setTimeout(waitForCMS, 50);
-        }
-      }
+    <script>
+      CMS.init();
+      // function waitForCMS() {
+      //   if (typeof CMS !== "undefined") {
+      //     CMS.init();
+      //   } else {
+      //     setTimeout(waitForCMS, 50);
+      //   }
+      // }
 
-      document.addEventListener("DOMContentLoaded", waitForCMS);
-    </script> -->
+      // document.addEventListener("DOMContentLoaded", waitForCMS);
+    </script>
   </body>
 </html>
