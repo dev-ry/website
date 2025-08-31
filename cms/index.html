@@ -36,9 +36,17 @@
     <!-- Decap CMS Script -->
     <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js"></script>
 
-    <!-- 👇 Manually trigger CMS init -->
     <script>
-      CMS.init();
+      function waitForCMS() {
+        if (typeof CMS !== "undefined") {
+          CMS.init();
+        } else {
+          setTimeout(waitForCMS, 50); // Retry until CMS is loaded
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", waitForCMS);
     </script>
+
   </body>
 </html>
