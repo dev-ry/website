@@ -21,23 +21,29 @@
     </style>
 
     <script>
-      // ✅ Force manual CMS init
       window.CMS_MANUAL_INIT = true;
 
-      // ✅ Correct malformed invite_token hash
-      function fixInviteTokenHash() {
-        const currentHash = window.location.hash;
-        if (currentHash.startsWith("#/invite_token=")) {
-          const correctedHash = "#" + currentHash.slice(2);
-          history.replaceState(null, null, correctedHash);
+      function fixInviteToken() {
+        const hash = window.location.hash;
+
+        // Case 1: URL starts with `#/invite_token=...`
+        if (hash.startsWith("#/invite_token=")) {
+          const corrected = "#" + hash.slice(2);
+          if (corrected !== hash) {
+            history.replaceState(null, null, corrected);
+          }
+        }
+
+        // Case 2: URL has `invite_token` as a query param but no hash
+        const url = new URL(window.location.href);
+        if (!hash && url.searchParams.has("invite_token")) {
+          const token = url.searchParams.get("invite_token");
+          history.replaceState(null, null, "#invite_token=" + token);
         }
       }
 
-      // Run on page load
-      fixInviteTokenHash();
-
-      // Run again on hash changes (in case it's rewritten later)
-      window.addEventListener("hashchange", fixInviteTokenHash);
+      fixInviteToken();
+      window.addEventListener("hashchange", fixInviteToken);
     </script>
   </head>
   <body>
