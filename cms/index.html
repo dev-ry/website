@@ -23,24 +23,9 @@
     <!-- 👇 Load Decap CMS -->
     <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js"></script>
 
-    <!-- 👇 Manually init CMS and Netlify Identity -->
+    <!-- 👇 Manually init CMS -->
     <script>
-      function waitForCMS() {
-        if (typeof CMS !== "undefined") {
-          CMS.init();
-        } else {
-          setTimeout(waitForCMS, 50);
-        }
-      }
-
-      netlifyIdentity.on('init', user => {
-        if (!user && window.location.hash.includes('invite_token=')) {
-          netlifyIdentity.open('signup');
-        }
-      });
-
-      netlifyIdentity.init();
-      waitForCMS();
+      CMS.init();
     </script>
   </body>
 </html>
