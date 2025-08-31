@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Content Manager</title>
+
     <style>
       .logo {
         display: block;
@@ -20,43 +21,31 @@
       }
     </style>
 
+    <!-- 👇 Load Netlify Identity -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <!-- 👇 Delay CMS auto init -->
     <script>
       window.CMS_MANUAL_INIT = true;
 
       function fixInviteToken() {
         const hash = window.location.hash;
-
-        // Case 1: URL starts with `#/invite_token=...`
         if (hash.startsWith("#/invite_token=")) {
-          const corrected = "#" + hash.slice(2);
-          if (corrected !== hash) {
-            history.replaceState(null, null, corrected);
-          }
-        }
-
-        // Case 2: URL has `invite_token` as a query param but no hash
-        const url = new URL(window.location.href);
-        if (!hash && url.searchParams.has("invite_token")) {
-          const token = url.searchParams.get("invite_token");
-          history.replaceState(null, null, "#invite_token=" + token);
+          history.replaceState(null, null, "#" + hash.slice(2));
         }
       }
 
       fixInviteToken();
-      window.addEventListener("hashchange", fixInviteToken);
     </script>
   </head>
-  <body>
-    <!-- Optional Logo -->
-    <img
-      src="/prosper-website-logo.png"
-      alt="Prosper XO"
-      class="logo"
-    />
 
-    <!-- ✅ Load Decap CMS -->
+  <body>
+    <img src="/prosper-website-logo.png" alt="Prosper XO" class="logo" />
+
+    <!-- 👇 Load Decap CMS -->
     <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js"></script>
 
+    <!-- 👇 Manually init CMS -->
     <script>
       function waitForCMS() {
         if (typeof CMS !== "undefined") {
@@ -70,5 +59,3 @@
     </script>
   </body>
 </html>
-
-
