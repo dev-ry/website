@@ -21,25 +21,34 @@
     </style>
 
     <script>
-      // ✅ Normalize invite_token hash BEFORE CMS loads
-      (function normalizeInviteToken() {
-        const hash = window.location.hash;
-        if (hash.startsWith("#/invite_token=")) {
-          const fixedHash = "#" + hash.slice(2);
-          history.replaceState(null, null, fixedHash);
-        }
-      })();
-
+      // ✅ Force manual CMS init
       window.CMS_MANUAL_INIT = true;
+
+      // ✅ Correct malformed invite_token hash
+      function fixInviteTokenHash() {
+        const currentHash = window.location.hash;
+        if (currentHash.startsWith("#/invite_token=")) {
+          const correctedHash = "#" + currentHash.slice(2);
+          history.replaceState(null, null, correctedHash);
+        }
+      }
+
+      // Run on page load
+      fixInviteTokenHash();
+
+      // Run again on hash changes (in case it's rewritten later)
+      window.addEventListener("hashchange", fixInviteTokenHash);
     </script>
   </head>
   <body>
+    <!-- Optional Logo -->
     <img
       src="/prosper-website-logo.png"
       alt="Prosper XO"
       class="logo"
     />
 
+    <!-- ✅ Load Decap CMS -->
     <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js"></script>
 
     <script>
@@ -55,4 +64,5 @@
     </script>
   </body>
 </html>
+
 
