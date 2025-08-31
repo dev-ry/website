@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
-  # repo: prosper-xo/website
-  # branch: main
+  repo: prosper-xo/website
+  branch: main
 
 media_folder: "assets/blog/uploads"
 public_folder: "/assets/blog"
