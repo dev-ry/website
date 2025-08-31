@@ -4,9 +4,9 @@ body {
 
 .logo-container {
   position: absolute;
-  top: 20px;
+  top: 0px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-60%);
   z-index: 1000;
 }
 

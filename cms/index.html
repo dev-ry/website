@@ -10,15 +10,6 @@
     <!-- 👇 Delay CMS auto init -->
     <script>
       window.CMS_MANUAL_INIT = true;
-
-      // function fixInviteToken() {
-      //   const hash = window.location.hash;
-      //   if (hash.startsWith("#/invite_token=")) {
-      //     history.replaceState(null, null, "#" + hash.slice(2));
-      //   }
-      // }
-
-      // fixInviteToken();
     </script>
   </head>
 
@@ -35,15 +26,6 @@
     <!-- 👇 Manually init CMS -->
     <script>
       CMS.init();
-      // function waitForCMS() {
-      //   if (typeof CMS !== "undefined") {
-      //     CMS.init();
-      //   } else {
-      //     setTimeout(waitForCMS, 50);
-      //   }
-      // }
-
-      // document.addEventListener("DOMContentLoaded", waitForCMS);
     </script>
   </body>
 </html>
