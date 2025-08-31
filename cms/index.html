@@ -5,9 +5,8 @@
     <title>Prosper XO CMS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
-    <script>
-      window.CMS_MANUAL_INIT = true;
-    </script>
+    <!-- Delay CMS initialization -->
+    <script>window.CMS_MANUAL_INIT = true;</script>
     <style>
       .logo {
         display: block;
@@ -23,38 +22,38 @@
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
     <!-- Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
+    <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js"></script>
 
     <script>
       function waitForCMS() {
-        if (typeof CMS !== "undefined") {
+        if (typeof CMS !== "undefined" && typeof netlifyIdentity !== "undefined") {
           CMS.init();
         } else {
           setTimeout(waitForCMS, 50);
         }
       }
 
-      document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", () => {
+        // Init Netlify Identity before CMS
         netlifyIdentity.on("init", user => {
-          const hash = window.location.hash;
-          if (!user && hash.includes("invite_token=")) {
+          if (!user && window.location.hash.includes("invite_token=")) {
             netlifyIdentity.open("signup");
           }
         });
 
-        netlifyIdentity.on("login", () => {
-          console.log("Logged in");
+        netlifyIdentity.on("login", user => {
+          console.log("✅ Logged in:", user.email);
         });
 
         netlifyIdentity.on("logout", () => {
-          console.log("Logged out");
-          netlifyIdentity.logout();
+          console.log("🚪 Logged out");
         });
 
-        netlifyIdentity.init();
+        netlifyIdentity.init(); // ← This must run before CMS.init()
         waitForCMS();
       });
     </script>
   </body>
 </html>
+
 
