@@ -2,30 +2,59 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prosper XO CMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
-    <title>Content Manager</title>
-    <link rel="stylesheet" href="cms.css" />
-
-    <!-- 👇 Delay CMS auto init -->
     <script>
       window.CMS_MANUAL_INIT = true;
     </script>
+    <style>
+      .logo {
+        display: block;
+        margin: 2rem auto;
+        max-width: 200px;
+      }
+    </style>
   </head>
-
   <body>
-    <div class="logo-container">
-      <img src="/prosper-website-logo.png" alt="Prosper XO" class="logo" />
-    </div>
+    <img src="/prosper-website-logo.png" alt="Prosper XO" class="logo" />
 
-    <!-- 👇 Load Netlify Identity -->
+    <!-- Netlify Identity Widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <!-- 👇 Load Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js"></script>
 
-    <!-- 👇 Manually init CMS -->
+    <!-- Decap CMS -->
+    <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
+
     <script>
-      CMS.init();
+      function waitForCMS() {
+        if (typeof CMS !== "undefined") {
+          CMS.init();
+        } else {
+          setTimeout(waitForCMS, 50);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        netlifyIdentity.on("init", user => {
+          const hash = window.location.hash;
+          if (!user && hash.includes("invite_token=")) {
+            netlifyIdentity.open("signup");
+          }
+        });
+
+        netlifyIdentity.on("login", () => {
+          console.log("Logged in");
+        });
+
+        netlifyIdentity.on("logout", () => {
+          console.log("Logged out");
+          netlifyIdentity.logout();
+        });
+
+        netlifyIdentity.init();
+        waitForCMS();
+      });
     </script>
   </body>
 </html>
+
