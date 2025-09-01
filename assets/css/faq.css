@@ -201,7 +201,7 @@ html body .new-header .main-header .secondary-nav .text-nav-why {
 }
 
 .secondary-nav .text-nav-press {
-  color: #45ff79 !important;
+  color: #ff4545 !important;
 }
 
 .secondary-nav .text-nav-insider {
@@ -243,6 +243,13 @@ html body .new-header .main-header .secondary-nav .text-nav-why {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.separator-2 {
+  width: 100%;
+  height: 2rem;
+  background: linear-gradient(90deg, #FE6177, #FE603B, #FA3BA5, #4BC1E2);
+  border-top: 2px solid #A199F1;
 }
 
 /* Hamburger animation when active */
@@ -372,7 +379,7 @@ html body .new-header .main-header .secondary-nav .text-nav-why {
 }
 
 .text-nav-press {
-  color: #45ff79 !important;
+  color: #FF4545 !important;
 }
 
 .text-nav-insider {
@@ -623,7 +630,7 @@ html body .new-header .main-header .secondary-nav .text-nav-why {
 .contact-section {
   padding: 0 2rem;
   margin-bottom: 3rem;
-  gap: 1rem; 
+  gap: 1rem;
 }
 
 .contact-options {

@@ -117,7 +117,6 @@
   max-width: 600px;
   width: 90%;
 }
-
 .press-cta {
   display: flex;
   flex-direction: column;
@@ -223,4 +222,3 @@
     max-width: 100%;
     overflow-wrap: break-word;
   }
-}

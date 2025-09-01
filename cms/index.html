@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Content Manager</title>
-    <style>
-      .logo {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 400px;
-      }
+    <link rel="stylesheet" href="cms.css" />
 
-      @media (max-width: 768px) {
-        .logo {
-          max-width: 50%;
-        }
-      }
-    </style>
+    <!-- 👇 Delay CMS auto init -->
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
   </head>
+
   <body>
-    <!-- Include the script that builds the page and powers Decap CMS -->
-     <img src="../assets/logos/prosper-website-logo.png" alt="Prosper XO" class="logo">
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <div class="logo-container">
+      <img src="/prosper-website-logo.png" alt="Prosper XO" class="logo" />
+    </div>
+
+    <!-- 👇 Load Netlify Identity -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- 👇 Load Decap CMS -->
+    <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js"></script>
+
+    <!-- 👇 Manually init CMS -->
+    <script>
+      CMS.init();
+    </script>
   </body>
 </html>

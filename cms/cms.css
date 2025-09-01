@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+
+.logo-container {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-60%);
+  z-index: 1000;
+}
+
+.logo {
+  max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    max-width: 60%;
+  }
+}
