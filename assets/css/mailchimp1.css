@@ -1,17 +1,23 @@
 /* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
 .luckiest-guy-regular {
-  font-family: "Luckiest Guy", cursive;
+  font-family: "Feu de camp Timber", serif;
   font-weight: 400;
   font-style: normal;
   text-align: center;
 }
 
+/* Font Face Declaration for Feu de camp Timber */
+@font-face {
+  font-family: "Feu de camp Timber";
+  src: url("../fonts/feudecamp-Timber-webfont.woff2") format("woff2");
+  font-display: block;
+}
 
 #mc_embed_signup {
     background: linear-gradient(#44c1f7, #ff6cb8);
     clear: left;
-    font-family: "Luckiest Guy", cursive;
-    font: 14px;
+    font-family: "Feu de camp Timber", serif;
+    font-size: 16px;
     width: 100%;
     max-width: 600px;
     border-radius: 15px;
@@ -25,7 +31,7 @@
 }
 
 #mc_embed_signup h2 {
-    font-family: "Luckiest Guy", cursive;
+    font-family: "Feu de camp Timber", serif;
     text-align: center;
     padding: .5em;
     margin: 15px 0;
@@ -33,7 +39,9 @@
 }
 
 #mc_embed_signup input {
-    border: 3px solid #363636;
+    background: #2b2b2b;
+    color: #f6ff00;
+    border: 2px solid #f7f7f7;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px;
@@ -54,12 +62,12 @@
 }
 
 #mc_embed_signup .button {
-    background-color: #000000;
+    background: #000000;
     border: 0 none;
     border-radius: 15px;
     color: #fef683;
     cursor: pointer;
-    font-family: "Luckiest Guy", cursive;
+    font-family: "Feu de camp Timber", serif;
     font-size: 18px;
     font-weight: normal;
     padding: .5em .5em;
@@ -85,7 +93,7 @@
 }
 
 #mc_embed_signup .mc-field-group {
-    font-family: "Luckiest Guy", cursive;
+    font-family: "Feu de camp Timber", serif;
     text-align: center;
     clear: left;
     position: relative;
@@ -175,7 +183,7 @@
 }
 
 #mc_embed_signup .indicates-required {
-    font-family: "Luckiest Guy", cursive;
+    font-family: "Feu de camp Timber", serif;
     text-align: right;
     font-size: 11px;
     margin-right: 4%;

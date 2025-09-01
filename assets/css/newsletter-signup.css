@@ -5,7 +5,25 @@
   align-items: center;
   text-align: center;
   gap: 2rem;
-  padding: 4rem 2rem;
+  padding: 0rem 2rem 2rem;
+}
+
+/* Font Face Declaration for Feu de camp Timber */
+@font-face {
+  font-family: "Feu de camp Timber";
+  src: url("../fonts/feudecamp-Timber-webfont.woff2") format("woff2");
+  font-display: block;
+}
+
+#get-involved-title {
+  font-family: "Feu de camp Timber", serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: bold;
+  color: #ffef09;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
+  -webkit-text-stroke: 1px black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .main p a {
@@ -70,13 +88,34 @@
 .press-header {
   max-width: 600px;
   width: 90%;
-  margin-bottom: 2rem;
+  margin: 2rem;
+  font-family: "Feu de camp Timber", serif;
+  font-size: clamp(2.0rem, 4vw, 4rem);
+  font-weight: bold;
+  color: #ffef09;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+  -webkit-text-stroke: 1px black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .press-body {
   max-width: 500px;
   width: 80%;
   margin-bottom: 3rem;
+}
+
+.press-gradient-text {
+  font-size: clamp(.5rem, 4vw, 1.25rem);
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff796c, #75c0e0, #ffe66d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  max-width: 600px;
+  width: 90%;
 }
 
 .press-cta {
@@ -133,7 +172,6 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #fff;
-  margin-bottom: 0.5rem;
 }
 
 .contact-block-lg .contact-email {
