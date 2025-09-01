@@ -140,6 +140,14 @@
     background-color: #9b59b6;
 }
 
+.card-monica {
+    background-color: #e8b4cb;
+}
+
+.card-gabe {
+    background-color: #8b9a8c;
+}
+
 /* Responsive layout */
 
 
@@ -358,7 +366,8 @@
   }
   
   .social-icons {
-    gap: 18px;
+    gap: 12px;
+    padding: 0 15px;
   }
   
   .social-link {
