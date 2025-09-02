@@ -7,7 +7,7 @@
     <title>Content Manager</title>
     <link rel="stylesheet" href="cms.css" />
 
-    <!-- 👇 Delay CMS auto init -->
+    <!-- Delay CMS auto init -->
     <script>
       window.CMS_MANUAL_INIT = true;
     </script>
@@ -18,12 +18,12 @@
       <img src="./prosper-website-logo.png" alt="Prosper XO" class="logo" />
     </div>
 
-    <!-- 👇 Load Netlify Identity -->
+    <!-- Load Netlify Identity -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <!-- 👇 Load Decap CMS -->
+    <!-- Load Decap CMS -->
     <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js"></script>
 
-    <!-- 👇 Netlify Identity Callback Handling -->
+    <!-- Netlify Identity Callback Handling -->
     <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", (user) => {
@@ -33,102 +33,26 @@
             });
           }
         });
+
+        window.netlifyIdentity.on("logout", () => {
+          // Close the CMS interface first to prevent race conditions
+          if (window.CMS && window.CMS.close) {
+            window.CMS.close();
+          }
+
+          // Redirect to login page after a short delay
+          setTimeout(() => {
+            window.location.href = "/";
+          }, 200);
+        });
+
         window.netlifyIdentity.on("close", () => {
           window.netlifyIdentity.close();
         });
       }
     </script>
 
-    <!-- 👇 Enhanced Debugging Script -->
-    <script>
-      // Debug Netlify Identity
-      console.log("🔍 Starting Netlify Identity Debug...");
-
-      // Check if Netlify Identity is loaded
-      if (window.netlifyIdentity) {
-        console.log("✅ Netlify Identity loaded successfully");
-
-        // Debug authentication state
-        window.netlifyIdentity.on("init", (user) => {
-          console.log("🔐 Identity initialized, user:", user);
-          if (user) {
-            console.log("👤 User is authenticated:", user.email);
-            console.log("🔑 User token:", user.token);
-            console.log("🆔 User ID:", user.id);
-            console.log("📧 User email confirmed:", user.email_confirmed_at);
-          } else {
-            console.log("❌ No user authenticated");
-          }
-        });
-
-        // Debug login events
-        window.netlifyIdentity.on("login", (user) => {
-          console.log("🎉 Login successful:", user.email);
-          console.log("🔑 New token:", user.token);
-        });
-
-        // Debug logout events
-        window.netlifyIdentity.on("logout", () => {
-          console.log("👋 User logged out");
-          // Clear all authentication data
-          localStorage.removeItem("netlify-identity-token");
-          localStorage.removeItem("netlify-identity-user");
-          localStorage.removeItem("gotrue.user");
-          localStorage.removeItem("gotrue.session");
-          sessionStorage.clear();
-          console.log("🧹 Cleared all authentication data");
-
-          // Force refresh the identity widget
-          setTimeout(() => {
-            if (window.netlifyIdentity) {
-              window.netlifyIdentity.close();
-              console.log("🔄 Refreshed identity widget");
-            }
-          }, 100);
-        });
-
-        // Debug errors
-        window.netlifyIdentity.on("error", (err) => {
-          console.error("❌ Identity error:", err);
-
-                    // Handle token errors by clearing stale data
-          if (err.message && err.message.includes("invalid_grant")) {
-            console.log("🔄 Clearing stale tokens due to invalid_grant error");
-            localStorage.removeItem("netlify-identity-token");
-            localStorage.removeItem("netlify-identity-user");
-            localStorage.removeItem("gotrue.user");
-            localStorage.removeItem("gotrue.session");
-            sessionStorage.clear();
-            console.log("🧹 Cleared all auth data. Try logging in again or run resetAuth() for manual reset");
-          }
-        });
-
-        // Debug close events
-        window.netlifyIdentity.on("close", () => {
-          console.log("🚪 Identity widget closed");
-        });
-      } else {
-        console.error("❌ Netlify Identity not loaded");
-      }
-
-              // Debug CMS initialization
-        console.log("📝 Initializing CMS...");
-        
-        // Add manual reset function for debugging
-        window.resetAuth = function() {
-          console.log("🔄 Manual auth reset triggered");
-          localStorage.removeItem("netlify-identity-token");
-          localStorage.removeItem("netlify-identity-user");
-          localStorage.removeItem("gotrue.user");
-          localStorage.removeItem("gotrue.session");
-          sessionStorage.clear();
-          window.location.reload();
-        };
-        
-        console.log("🛠️ Manual reset available: run resetAuth() in console if needed");
-    </script>
-
-    <!-- 👇 Manually init CMS -->
+    <!-- Initialize CMS -->
     <script>
       CMS.init();
     </script>
