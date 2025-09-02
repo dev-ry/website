@@ -14,8 +14,9 @@
   to = "/.netlify/identity/:splat"
   status = 200
 
-# CMS SPA fallback
+# CMS SPA fallback - exclude static files
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
