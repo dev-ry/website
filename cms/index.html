@@ -91,7 +91,7 @@
         window.netlifyIdentity.on("error", (err) => {
           console.error("❌ Identity error:", err);
 
-          // Handle token errors by clearing stale data
+                    // Handle token errors by clearing stale data
           if (err.message && err.message.includes("invalid_grant")) {
             console.log("🔄 Clearing stale tokens due to invalid_grant error");
             localStorage.removeItem("netlify-identity-token");
@@ -99,12 +99,7 @@
             localStorage.removeItem("gotrue.user");
             localStorage.removeItem("gotrue.session");
             sessionStorage.clear();
-
-            // Force a page reload to reset everything
-            setTimeout(() => {
-              console.log("🔄 Reloading page to reset authentication state");
-              window.location.reload();
-            }, 1000);
+            console.log("🧹 Cleared all auth data. Try logging in again or run resetAuth() for manual reset");
           }
         });
 
@@ -116,8 +111,21 @@
         console.error("❌ Netlify Identity not loaded");
       }
 
-      // Debug CMS initialization
-      console.log("📝 Initializing CMS...");
+              // Debug CMS initialization
+        console.log("📝 Initializing CMS...");
+        
+        // Add manual reset function for debugging
+        window.resetAuth = function() {
+          console.log("🔄 Manual auth reset triggered");
+          localStorage.removeItem("netlify-identity-token");
+          localStorage.removeItem("netlify-identity-user");
+          localStorage.removeItem("gotrue.user");
+          localStorage.removeItem("gotrue.session");
+          sessionStorage.clear();
+          window.location.reload();
+        };
+        
+        console.log("🛠️ Manual reset available: run resetAuth() in console if needed");
     </script>
 
     <!-- 👇 Manually init CMS -->
