@@ -2,21 +2,19 @@
   publish = "."
   command = "echo 'No build command needed for CMS'"
 
-# Netlify Identity redirects
-[[redirects]]
-  from = "/.netlify/identity"
-  to = "/.netlify/identity"
-  status = 200
+# Explicitly serve config.yml as static file
+[[headers]]
+  for = "/config.yml"
+  [headers.values]
+    Content-Type = "text/yaml"
 
-# Handle Netlify Identity callbacks
+# Redirect admin routes to CMS
 [[redirects]]
-  from = "/.netlify/identity/*"
-  to = "/.netlify/identity/:splat"
-  status = 200
-
-# CMS SPA fallback - exclude static files
-[[redirects]]
-  from = "/*"
+  from = "/admin"
   to = "/index.html"
   status = 200
-  force = false
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/index.html"
+  status = 200
