@@ -8,4 +8,4 @@
   [headers.values]
     Content-Type = "text/yaml"
 
-# No redirects needed - CMS is at root
+# No redirects needed - CMS is at root directory
