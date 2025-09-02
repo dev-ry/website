@@ -8,13 +8,4 @@
   [headers.values]
     Content-Type = "text/yaml"
 
-# Redirect admin routes to CMS
-[[redirects]]
-  from = "/admin"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/admin/*"
-  to = "/index.html"
-  status = 200
+# No redirects needed - CMS is at root
