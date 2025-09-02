@@ -1,0 +1,21 @@
+[build]
+  publish = "."
+  command = "echo 'No build command needed for CMS'"
+
+# Netlify Identity redirects
+[[redirects]]
+  from = "/.netlify/identity"
+  to = "/.netlify/identity"
+  status = 200
+
+# Handle Netlify Identity callbacks
+[[redirects]]
+  from = "/.netlify/identity/*"
+  to = "/.netlify/identity/:splat"
+  status = 200
+
+# CMS SPA fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

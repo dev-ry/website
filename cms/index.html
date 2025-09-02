@@ -15,13 +15,77 @@
 
   <body>
     <div class="logo-container">
-      <img src="/prosper-website-logo.png" alt="Prosper XO" class="logo" />
+      <img src="./prosper-website-logo.png" alt="Prosper XO" class="logo" />
     </div>
 
     <!-- 👇 Load Netlify Identity -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <!-- 👇 Load Decap CMS -->
     <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js"></script>
+
+    <!-- 👇 Netlify Identity Callback Handling -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/cms/";
+            });
+          }
+        });
+        window.netlifyIdentity.on("close", () => {
+          window.netlifyIdentity.close();
+        });
+      }
+    </script>
+
+    <!-- 👇 Enhanced Debugging Script -->
+    <script>
+      // Debug Netlify Identity
+      console.log("🔍 Starting Netlify Identity Debug...");
+
+      // Check if Netlify Identity is loaded
+      if (window.netlifyIdentity) {
+        console.log("✅ Netlify Identity loaded successfully");
+
+        // Debug authentication state
+        window.netlifyIdentity.on("init", (user) => {
+          console.log("🔐 Identity initialized, user:", user);
+          if (user) {
+            console.log("👤 User is authenticated:", user.email);
+            console.log("🔑 User token:", user.token);
+          } else {
+            console.log("❌ No user authenticated");
+          }
+        });
+
+        // Debug login events
+        window.netlifyIdentity.on("login", (user) => {
+          console.log("🎉 Login successful:", user.email);
+          console.log("🔑 New token:", user.token);
+        });
+
+        // Debug logout events
+        window.netlifyIdentity.on("logout", () => {
+          console.log("👋 User logged out");
+        });
+
+        // Debug errors
+        window.netlifyIdentity.on("error", (err) => {
+          console.error("❌ Identity error:", err);
+        });
+
+        // Debug close events
+        window.netlifyIdentity.on("close", () => {
+          console.log("🚪 Identity widget closed");
+        });
+      } else {
+        console.error("❌ Netlify Identity not loaded");
+      }
+
+      // Debug CMS initialization
+      console.log("📝 Initializing CMS...");
+    </script>
 
     <!-- 👇 Manually init CMS -->
     <script>
