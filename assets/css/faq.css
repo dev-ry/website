@@ -7,23 +7,25 @@
   font-display: block;
 }
 
-/* New Header Design */
-.new-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-/* Main Header Bar */
-.main-header {
+.header-top {
   background: #ff7a75; /* Light coral/salmon pink */
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: center;
   align-items: center;
-  padding: 4rem 2rem 1rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: relative;
+  padding: 1rem;
+  margin: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 .hamburger-menu {
   display: flex;
@@ -56,6 +58,125 @@
 .hamburger-menu:hover span {
   background: #333;
 }
+
+.social-icons-faq {
+  display: flex;
+  align-items: end;
+  gap: 0.5rem;
+  position: absolute;
+  right: 2rem;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+.social-icons-faq a {
+  margin: 0;
+  padding: 0 0 0 0.5rem;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.social-icons-faq a:hover {
+  transform: scale(1.1);
+}
+
+.social-icons-faq img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0); /* Make icons black */
+}
+
+/* Media query for social-icons */
+@media (max-width: 768px) {
+  .social-icons-faq {
+    display: none;
+  }
+}
+
+.header-bottom-nav {
+  background: black;
+  position: relative;
+}
+
+/* Text-based Secondary Navigation Bar */
+.text-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 5rem;
+}
+
+/* Text-based navigation links */
+.text-nav .text-nav-link {
+  font-family: "Feu de camp Timber", serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.text-nav .text-nav-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Text navigation link colors */
+.text-nav-why {
+  background: linear-gradient(90deg, #ec0caa, #e2e60d, #3496c5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #ec0caa; /* Fallback color */
+}
+
+.text-nav-team {
+  color: #fa2dfd !important;
+}
+
+.text-nav-ethos {
+  color: #44fe7a !important;
+}
+
+.text-nav-events {
+  color: #2ff5ff !important;
+}
+
+.text-nav-involved {
+  color: #ffb344 !important;
+}
+
+.text-nav-press {
+  color: #FF4545 !important;
+}
+
+.text-nav-insider {
+  color: #d674ff !important;
+}
+
+/* Mobile menu styles - nav menu */
+@media (max-width: 768px) {
+  .header-bottom-nav {
+    height: 50%;
+  }
+  .tex-nav-link, .text-nav-why, .text-nav-team, .text-nav-ethos, .text-nav-events, .text-nav-involved, .text-nav-press, .text-nav-insider {
+    display: none;
+  }
+
+  /* Mobile-specific styles for secondary nav */
+  .secondary-nav {
+    width: 100%;
+    left: -100%;
+  }
+
+  .secondary-nav.nav-open {
+    left: 0;
+  }
+}
+
 
 /* Secondary Navigation Menu */
 .secondary-nav {
@@ -153,6 +274,7 @@
   display: block !important;
   background: transparent !important;
 }
+
 
 /* Apply the same colors to secondary nav menu items */
 .secondary-nav .text-nav-why {
@@ -266,12 +388,9 @@ html body .new-header .main-header .secondary-nav .text-nav-why {
 }
 
 .logo-container {
-  position: absolute;
-  left: 50%;
-  top: 60%;
-  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .logo-container a {
@@ -292,139 +411,10 @@ html body .new-header .main-header .secondary-nav .text-nav-why {
 }
 
 .logo-xo img {
-  width: 150px;
+  width: clamp(100px, 15vw, 150px);
   height: auto;
 }
 
-.social-icons {
-  gap: 0.5rem;
-  position: absolute;
-  right: 2rem;
-  top: 45%;
-  transform: translateY(-50%);
-}
-
-.social-icons a {
-  margin: 0;
-  padding: 0 0 0 0.5rem;
-}
-
-.social-icons a {
-  display: inline-block;
-  transition: transform 0.2s ease;
-}
-
-.social-icons a:hover {
-  transform: scale(1.1);
-}
-
-.social-icons img {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0); /* Make icons black */
-}
-
-/* Text-based Secondary Navigation Bar */
-.text-nav {
-  background: #000;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem 5rem 1rem 8rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Text-based navigation links */
-.text-nav .text-nav-link {
-  font-family: "Feu de camp Timber", serif;
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  color: #fff;
-}
-
-.text-nav .text-nav-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Text navigation link colors */
-.text-nav-why {
-  background: linear-gradient(90deg, #ec0caa, #e2e60d, #3496c5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: #ec0caa; /* Fallback color */
-}
-
-.text-nav-team {
-  color: #fa2dfd !important;
-}
-
-.text-nav-ethos {
-  color: #44fe7a !important;
-}
-
-.text-nav-events {
-  color: #2ff5ff !important;
-}
-
-.text-nav-involved {
-  color: #ffb344 !important;
-}
-
-.text-nav-press {
-  color: #FF4545 !important;
-}
-
-.text-nav-insider {
-  color: #d674ff !important;
-}
-
-/* Mobile menu styles */
-@media (max-width: 768px) {
-  .text-nav {
-    position: fixed;
-    top: 80px; /* Height of main header */
-    left: -100%;
-    width: 100%;
-    height: calc(100vh - 80px);
-    background: #000;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 2rem;
-    transition: left 0.3s ease;
-    z-index: 999;
-  }
-
-  .text-nav.nav-open {
-    left: 0;
-  }
-
-  .text-nav .text-nav-link {
-    margin: 1rem 0;
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    width: 100%;
-    text-align: center;
-  }
-
-  /* Mobile-specific styles for secondary nav */
-  .secondary-nav {
-    width: 100%;
-    left: -100%;
-  }
-
-  .secondary-nav.nav-open {
-    left: 0;
-  }
-}
 
 /* FAQ Page Specific Styles */
 .faq-container {
@@ -498,8 +488,9 @@ html body .new-header .main-header .secondary-nav .text-nav-why {
 }
 
 .faq-answer {
-  background: #ffef09;
+  background: #ff7a75;
   padding: 2rem;
+  border: 3px solid black;
   border-radius: 36px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
@@ -536,7 +527,7 @@ html body .new-header .main-header .secondary-nav .text-nav-why {
 
 .faq-list li {
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   color: #1f2937;
   line-height: 1.6;
@@ -547,7 +538,7 @@ html body .new-header .main-header .secondary-nav .text-nav-why {
 
 .faq-list li:before {
   content: "•";
-  color: #f59e0b;
+  color: #ffffff;
   font-weight: bold;
   font-size: 1.5rem;
   position: absolute;
@@ -557,15 +548,15 @@ html body .new-header .main-header .secondary-nav .text-nav-why {
 
 .faq-list li strong {
   font-weight: 600;
-  color: #dc2626;
+  color: #ffffff;
 }
 
 .faq-fact {
-  background: #fef3c7;
-  border-left: 4px solid #f59e0b;
+  background: #83cafd;
+  border: 4px solid #000000;
   padding: 1rem;
   margin: 1rem 0;
-  border-radius: 0 8px 8px 0;
+  border-radius: 8px;
   font-style: italic;
 }
 
@@ -622,8 +613,9 @@ html body .new-header .main-header .secondary-nav .text-nav-why {
 .involvement-action {
   font-family: "Poppins", sans-serif;
   font-size: 2.1rem;
-  color: #fe0000;
+  color: #ffffff;
   font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
 /* Contact Section */
@@ -657,9 +649,10 @@ html body .new-header .main-header .secondary-nav .text-nav-why {
   font-family: "Poppins", sans-serif;
   font-size: 2.1rem;
   font-weight: 500;
-  color: #fe0000;
+  color: #ffffff;
   font-weight: 600;
-  -webkit-text-fill-color: #fe0000;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  -webkit-text-fill-color: #ffffff;
   background-clip: unset;
   -webkit-background-clip: unset;
 }
@@ -781,15 +774,8 @@ html body .new-header .main-header .secondary-nav .text-nav-why {
     font-size: 1.5rem;
   }
 
-  .logo-xo img {
-    width: 30px;
-  }
 
-  .social-icons {
-    gap: 1rem;
-  }
-
-  .social-icons img {
+  .social-icons-faq img {
     width: 20px;
     height: 20px;
   }
