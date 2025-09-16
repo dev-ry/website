@@ -39,16 +39,13 @@
   margin-right: auto;
 }
 
+
 .footer-column p {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   color: white;
   margin: 0;
 }
-
-/* footer elements - Get Involved Section */
-
-
 
 /* Apply gradient to PRESS INQUIRIES text */
 .press-inquiries {
@@ -83,6 +80,7 @@
   transition: transform 0.2s ease;
   color: #fced18;
 }
+
 
 .footer-social a:hover {
   transform: scale(1.1);
@@ -122,4 +120,11 @@
     flex-wrap: wrap;
     gap: 1rem;
   }
+
+  .footer-contact {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
 }
+
