@@ -97,15 +97,50 @@
 
   <body>
     <!-- New Header Design -->
-    <header class="new-header">
-      <!-- Main Header Bar -->
-      <div class="main-header">
+    <header> <!--consists of two layered parts - 1.) header-top 2.) header-bottom-nav -->
+      <div class="header-top">
+        <div class="logo-container">
+          <a href="../welcome/"></a>
+            <div class="logo-xo">
+              <img src="../assets/logos/prosper-website-logo.png" alt="XO" />
+            </div>
         <div class="hamburger-menu">
           <span></span>
           <span></span>
           <span></span>
         </div>
+      </div>
+          <!--Social Media-->
+        <div class="social-icons-faq">
+          <a href="https://x.com/prosperxoxoxo" aria-label="X" target="_blank">
+            <img src="../assets/icons/prosper-website-social-x.svg" alt="X" />
+          </a>
+          <a href="https://instagram.com/prosperxo" aria-label="Instagram" target="_blank">
+            <img src="../assets/icons/prosper-website-social-ig.svg" alt="Instagram"/>
+          </a>
+          <a href="https://www.linkedin.com/company/prosper-xo/" aria-label="LinkedIn" target="_blank">
+            <img src="../assets/icons/prosper-website-social-linkedin.svg" alt="LinkedIn"/>
+          </a>
+          <a href="https://youtube.com/@prosperxo" aria-label="YouTube" target="_blank">
+            <img src="../assets/icons/prosper-website-social-youtube.svg" alt="YouTube"/>
+          </a>
+          <a href="https://facebook.com/prosperxo" aria-label="Facebook" target="_blank">
+            <img src="../assets/icons/prosper-website-social-fb.svg" alt="Facebook"/>
+          </a>
+        </div>
+      </div>  <!--End of header-top (the top half)-->
 
+      <div class="header-bottom-nav">  <!--black navigation bar-->
+        <nav class="text-nav">
+          <a href="../why-prosper" class="text-nav-link text-nav-why">WHY PROSPER</a>
+          <a href="../team" class="text-nav-link text-nav-team">TEAM</a>
+          <a href="../ethos" class="text-nav-link text-nav-ethos">ETHOS</a>
+          <a href="../events" class="text-nav-link text-nav-events">EVENTS</a>
+          <a href="../get-involved" class="text-nav-link text-nav-involved">GET INVOLVED</a>
+          <a href="../press" class="text-nav-link text-nav-press">PRESS</a>
+          <a href="../xo-insider" class="text-nav-link text-nav-insider">XO INSIDER</a>
+        </nav>
+        <!-- Text-based Secondary Navigation Bar -->
         <div class="secondary-nav">
           <a href="../why-prosper" class="text-nav-why">WHY PROSPER</a>
           <a href="../team" class="text-nav-team">TEAM</a>
@@ -114,73 +149,8 @@
           <a href="../get-involved" class="text-nav-involved">GET INVOLVED</a>
           <a href="../press" class="text-nav-press">PRESS</a>
           <a href="../xo-insider" class="text-nav-insider">XO INSIDER</a>
-        </div>
-
-        <div class="logo-container">
-          <a href="../welcome/">
-            <div class="logo-xo">
-              <img src="../assets/logos/prosper-website-logo.png" alt="XO" />
-            </div>
-          </a>
-        </div>
-
-        <div class="social-icons">
-          <a href="https://x.com/prosperxoxoxo" aria-label="X" target="_blank">
-            <img src="../assets/icons/prosper-website-social-x.svg" alt="X" />
-          </a>
-          <a
-            href="https://instagram.com/prosperxo"
-            aria-label="Instagram"
-            target="_blank"
-          >
-            <img
-              src="../assets/icons/prosper-website-social-ig.svg"
-              alt="Instagram"
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/prosper-xo/"
-            aria-label="LinkedIn"
-            target="_blank"
-          >
-            <img
-              src="../assets/icons/prosper-website-social-linkedin.svg"
-              alt="LinkedIn"
-            />
-          </a>
-          <a
-            href="https://youtube.com/@prosperxo"
-            aria-label="YouTube"
-            target="_blank"
-          >
-            <img
-              src="../assets/icons/prosper-website-social-youtube.svg"
-              alt="YouTube"
-            />
-          </a>
-          <a
-            href="https://facebook.com/prosperxo"
-            aria-label="Facebook"
-            target="_blank"
-          >
-            <img
-              src="../assets/icons/prosper-website-social-fb.svg"
-              alt="Facebook"
-            />
-          </a>
-        </div>
+        </div>  
       </div>
-
-      <!-- Text-based Secondary Navigation Bar -->
-      <nav class="text-nav">
-        <a href="../why-prosper" class="text-nav-link text-nav-why">WHY PROSPER</a>
-        <a href="../team" class="text-nav-link text-nav-team">TEAM</a>
-        <a href="../ethos" class="text-nav-link text-nav-ethos">ETHOS</a>
-        <a href="../events" class="text-nav-link text-nav-events">EVENTS</a>
-        <a href="../get-involved" class="text-nav-link text-nav-involved">GET INVOLVED</a>
-        <a href="../press" class="text-nav-link text-nav-press">PRESS</a>
-        <a href="../xo-insider" class="text-nav-link text-nav-insider">XO INSIDER</a>
-      </nav>
     </header>
     
     <main>
@@ -190,7 +160,9 @@
           Stay connected with Prosper XO. Drop your email below to get <br>the 
           exclusive <i>XO Insider</i> newsletter.
         </p>
-        <a href="https://mailchi.mp/d31733a7aa36/prosperxo" class="btn-lg btn-blue" target="_blank">JOIN THE
+        <!-- TODO: Change to /newsletter-signup -->
+        <!-- <a href="/newsletter-signup" class="btn-lg btn-blue" target="_blank">JOIN THE -->
+        <a href="/staging-wip/newsletter-signup.html" class="btn-lg btn-blue" target="_blank">JOIN THE
           <i>XO INSIDER</i>
         </a>
       </div>
@@ -206,7 +178,9 @@
           <p class="beta-access-content">
             Sign up at the link below!
           </p>
-          <a href="<beta-access-link>" class="btn-beta-access" target="_blank">
+          <!--  -->
+          <!-- <a href="/beta-signup" class="btn-beta-access" target="_blank"> -->
+          <a href="/staging-wip/beta-signup.html" class="btn-beta-access" target="_blank">
             SIGN UP FOR BETA ACCESS
           </a>
         </div>
@@ -294,5 +268,65 @@
         </div>
       </footer>
     </main>
+    <script src="../assets/js/script.js" defer></script>
+
+    <script>
+      // Mobile menu functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const secondaryNav = document.querySelector(".secondary-nav");
+        const body = document.body;
+
+        console.log("Hamburger element:", hamburger);
+        console.log("Secondary nav element:", secondaryNav);
+        console.log("Menu items:", secondaryNav.querySelectorAll("a"));
+
+        hamburger.addEventListener("click", function (e) {
+          e.stopPropagation();
+          secondaryNav.classList.toggle("nav-open");
+          hamburger.classList.toggle("active");
+          
+          console.log("Menu toggled. nav-open class:", secondaryNav.classList.contains("nav-open"));
+          console.log("Menu items visible:", secondaryNav.querySelectorAll("a").length);
+          
+          // Prevent body scroll when menu is open
+          if (secondaryNav.classList.contains("nav-open")) {
+            body.style.overflow = "hidden";
+          } else {
+            body.style.overflow = "";
+          }
+        });
+
+        // Close menu when clicking on a link or close button
+        secondaryNav.addEventListener("click", function (e) {
+          if (e.target.tagName === "A" || e.target === secondaryNav) {
+            secondaryNav.classList.remove("nav-open");
+            hamburger.classList.remove("active");
+            body.style.overflow = "";
+          }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (e) {
+          if (
+            !hamburger.contains(e.target) &&
+            !secondaryNav.contains(e.target)
+          ) {
+            secondaryNav.classList.remove("nav-open");
+            hamburger.classList.remove("active");
+            body.style.overflow = "";
+          }
+        });
+
+        // Close menu on escape key
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && secondaryNav.classList.contains("nav-open")) {
+            secondaryNav.classList.remove("nav-open");
+            hamburger.classList.remove("active");
+            body.style.overflow = "";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
