@@ -11,7 +11,7 @@
 /* Font Face Declaration for Feu de camp Timber */
 @font-face {
   font-family: "Feu de camp Timber";
-  src: url("../fonts/feudecamp-Timber-webfont.woff2") format("woff2");
+  src: url("../fonts/feudecamp-timber-webfont.woff2") format("woff2");
   font-display: block;
 }
 
@@ -45,7 +45,7 @@
 
 .btn-lg {
   display: inline-block;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -90,7 +90,7 @@
   width: 90%;
   margin: 2rem;
   font-family: "Feu de camp Timber", serif;
-  font-size: clamp(2.0rem, 4vw, 4rem);
+  font-size: clamp(2rem, 4vw, 4rem);
   font-weight: bold;
   color: #ffef09;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
@@ -106,7 +106,7 @@
 }
 
 .press-gradient-text {
-  font-size: clamp(.5rem, 4vw, 1.25rem);
+  font-size: clamp(0.5rem, 4vw, 1.25rem);
   font-weight: bold;
   background: linear-gradient(90deg, #ff796c, #75c0e0, #ffe66d);
   background-clip: text;
@@ -122,7 +122,7 @@
   flex-direction: column;
   gap: 0.75rem;
   align-items: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .press-cta-title {
@@ -148,7 +148,6 @@
 
 /* Responsive tweaks */
 @media (max-width: 100%) {
-
   .press-header,
   .press-body {
     max-width: 90%;
@@ -165,7 +164,7 @@
 }
 
 .contact-block-lg .contact-label {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
   letter-spacing: 0.03em;
@@ -174,7 +173,7 @@
 }
 
 .contact-block-lg .contact-email {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 3rem;
   font-weight: 600;
   text-decoration: none;
@@ -191,7 +190,7 @@
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 3rem;
   font-weight: 600;
 }
@@ -200,18 +199,15 @@
   color: #5525bc;
 }
 
-
-
 @media (max-width: 768px) {
   .main p {
     font-size: 1rem;
     line-height: 1.4;
   }
 
-
   /* Adjust oversized PRESS INQUIRIES email */
   .contact-email {
-    font-size: .8rem;
+    font-size: 0.8rem;
     /* or 14-16px if you're using px */
     word-break: break-word;
   }

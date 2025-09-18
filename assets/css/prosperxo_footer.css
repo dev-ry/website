@@ -3,7 +3,7 @@
 /* Font Face Declaration for Feu de camp Timber */
 @font-face {
   font-family: "Feu de camp Timber";
-  src: url("../fonts/feudecamp-Timber-webfont.woff2") format("woff2");
+  src: url("../fonts/feudecamp-timber-webfont.woff2") format("woff2");
   font-display: block;
 }
 
@@ -38,7 +38,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-
 
 .footer-column p {
   font-family: "Poppins", sans-serif;
@@ -80,7 +79,6 @@
   transition: transform 0.2s ease;
   color: #fced18;
 }
-
 
 .footer-social a:hover {
   transform: scale(1.1);
@@ -125,6 +123,4 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-
 }
-

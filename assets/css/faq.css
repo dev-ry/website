@@ -3,7 +3,7 @@
 /* Font Face Declaration for Feu de camp Timber */
 @font-face {
   font-family: "Feu de camp Timber";
-  src: url("../fonts/feudecamp-Timber-webfont.woff2") format("woff2");
+  src: url("../fonts/feudecamp-timber-webfont.woff2") format("woff2");
   font-display: block;
 }
 
@@ -13,9 +13,6 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-
-
-
 
 /* Force WHY PROSPER link to be visible with maximum specificity and gradient */
 .secondary-nav .text-nav-why,
@@ -37,11 +34,8 @@ html body .secondary-nav .text-nav-why {
 .separator-2 {
   width: 100%;
   height: 2rem;
-  background: linear-gradient(90deg, #FE6177, #FE603B, #FA3BA5, #4BC1E2);
+  background: linear-gradient(90deg, #fe6177, #fe603b, #fa3ba5, #4bc1e2);
 }
-
-
-
 
 /* FAQ Page Specific Styles */
 .faq-container {
@@ -51,7 +45,6 @@ html body .secondary-nav .text-nav-why {
   background: #6a5de8;
   text-align: center;
 }
-
 
 .faq-title {
   font-family: "Feu de camp Timber", serif;
@@ -238,7 +231,7 @@ html body .secondary-nav .text-nav-why {
   font-size: 1.5rem;
   color: #ffffff;
   font-weight: 600;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Contact Section */
@@ -274,7 +267,7 @@ html body .secondary-nav .text-nav-why {
   font-weight: 500;
   color: #ffffff;
   font-weight: 600;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   -webkit-text-fill-color: #ffffff;
   background-clip: unset;
   -webkit-background-clip: unset;
@@ -396,7 +389,6 @@ html body .secondary-nav .text-nav-why {
   .logo-text {
     font-size: 1.5rem;
   }
-
 
   .social-icons-faq img {
     width: 20px;

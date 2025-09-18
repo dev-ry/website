@@ -3,7 +3,7 @@
 /* Font Face Declaration for Feu de camp Timber */
 @font-face {
   font-family: "Feu de camp Timber";
-  src: url("../fonts/feudecamp-Timber-webfont.woff2") format("woff2");
+  src: url("../fonts/feudecamp-timber-webfont.woff2") format("woff2");
   font-display: block;
 }
 
@@ -38,10 +38,10 @@ body {
 }
 
 main p {
-    max-width: 90%;
-    margin: 0 auto;
-    text-align: center;
-  }
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
 
 p {
   font-family: "Poppins", sans-serif;
@@ -49,16 +49,12 @@ p {
   color: black;
 }
 
-
-
 .separator-2 {
   width: 100%;
   height: 2rem;
-  background: linear-gradient(90deg, #FE6177, #FE603B, #FA3BA5, #4BC1E2);
-  border-top: 2px solid #A199F1;
+  background: linear-gradient(90deg, #fe6177, #fe603b, #fa3ba5, #4bc1e2);
+  border-top: 2px solid #a199f1;
 }
-
-
 
 /* Beta Sign-Up Page Specific Styles */
 .beta-signup-container {
@@ -107,7 +103,6 @@ p {
   text-align: center;
 }
 
-
 .xo-icon {
   display: flex;
   justify-content: center;
@@ -124,4 +119,3 @@ p {
   width: 80px;
   height: auto;
 }
-

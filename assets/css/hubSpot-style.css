@@ -1,7 +1,7 @@
 /* Font Face Declaration for Feu de camp Timber */
 @font-face {
   font-family: "Feu de camp Timber";
-  src: url("../fonts/feudecamp-Timber-webfont.woff2") format("woff2");
+  src: url("../fonts/feudecamp-timber-webfont.woff2") format("woff2");
   font-display: block;
 }
 
@@ -18,14 +18,12 @@
   margin: 0 auto;
 }
 
-
 /* === HubSpot Custom Overrides === */
 #hubspot-container {
   font-family: "Feu de camp Timber", sans-serif !important;
   max-width: 800px;
   margin: 0 auto;
   box-sizing: border-box;
-  
 }
 
 .hs-input {
@@ -38,10 +36,9 @@
   color: yellow;
   margin: 1rem;
   border-radius: 15px;
-  padding: .5rem;
+  padding: 0.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 /* Hover effect */
 .hs-button:hover {
@@ -53,7 +50,7 @@
 
 .hs-button:active {
   transform: translateY(2px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hs-input-box {
