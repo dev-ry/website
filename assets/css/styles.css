@@ -216,8 +216,8 @@ p {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  margin: 2rem;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -237,7 +237,7 @@ p {
   .survey-buttons {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    padding: 0 0.5rem;
+    padding: 0;
   }
 
   .survey-buttons a {
@@ -915,7 +915,6 @@ p {
 
   .social-icons {
     justify-content: center;
-    margin-top: 2rem;
   }
 }
 

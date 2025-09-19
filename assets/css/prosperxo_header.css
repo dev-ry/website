@@ -1,10 +1,17 @@
+@font-face {
+  font-family: "Feu de camp Timber";
+  src: url("../fonts/feudecamp-timber-webfont.woff2") format("woff2");
+  font-display: block;
+}
+
+
 #header-top-bottom-container {
   margin: 0 auto;
   width: 100%;
 }
 
 .header-top {
-  background: #ff7a75; /* Light coral/salmon pink */
+  background: #c100b1; /* Light coral/salmon pink */
   display: flex;
   justify-content: center;
   align-items: center;
