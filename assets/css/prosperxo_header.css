@@ -37,7 +37,6 @@
 }
 
 .hamburger-menu:hover {
-  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-50%) scale(1.05);
 }
 
