@@ -59,10 +59,32 @@
   text-align: left;
 }
 
+.event-body-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.event-body-list li {
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.event-body-list li:before {
+  content: "•";
+  color: rgb(255, 255, 255);
+  position: absolute;
+  left: 0;
+}
+
 /* Portrait mobile devices only */
 @media (max-width: 768px) and (orientation: portrait) {
     .event-body-head {
-        text-align: center;
+        text-align: left;
+    }
+
+    .event-title {
+      font-size: 1.7rem;
     }
 }
 
@@ -74,11 +96,24 @@
   text-align: left;
 }
 
+.event-speakers {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #fff;
+  text-align: left;
+}
+
 /* Portrait mobile devices only */
 @media (max-width: 768px) and (orientation: portrait) {
     .event-body {
         text-align: justify;
     }
+
+    .event-speakers {
+      text-align: justify;
+      font-size: 1.2rem;
+    }
+
 }
 
 /* RSVP link styled like flyer */
