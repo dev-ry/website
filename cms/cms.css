@@ -11,7 +11,9 @@ body {
 }
 
 .logo {
-  max-width: 300px;
+  padding-top: 15px;
+  max-width: 100px;
+  height: auto;
 }
 
 @media (max-width: 768px) {

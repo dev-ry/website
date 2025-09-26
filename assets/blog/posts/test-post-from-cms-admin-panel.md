@@ -5,10 +5,11 @@ tags:
   - test
   - post
   - new
-draft: true
+draft: false
 date: 2025-09-04T21:22:49.999Z
-cover_image: /assets/blog/prosper-website-logo-face.png
+cover_image: /assets/blog/uploads/prosper-website-logo-face.png
 ---
+
 # Test Post
 
 Welcome to Prosper XO's Blog. We are excited to have a place to keep you updated with all that is going on with Prosper XO.

@@ -1,0 +1,21 @@
+{
+  "name": "prosper-xo-website",
+  "version": "1.0.0",
+  "description": "Prosper XO website with blog posts",
+  "main": "index.js",
+  "scripts": {
+    "build": "node scripts/build-posts.js",
+    "dev": "npm run build && python -m http.server 8000",
+    "preview": "python -m http.server 8000"
+  },
+  "keywords": [
+    "blog",
+    "static-site",
+    "prosper-xo"
+  ],
+  "author": "Prosper XO",
+  "license": "MIT",
+  "devDependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}
