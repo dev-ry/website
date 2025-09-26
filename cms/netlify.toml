@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "echo 'No build command needed for CMS'"
+  command = "npm install && npm run build"
 
 # Explicitly serve config.yml as static file
 [[headers]]
