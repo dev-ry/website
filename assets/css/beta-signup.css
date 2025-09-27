@@ -38,7 +38,7 @@ body {
 }
 
 main p {
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
 }
@@ -81,7 +81,7 @@ p {
   text-align: center;
   font-weight: 600;
   color: #000000;
-  margin: 2.5rem;
+  margin: 2rem;
 }
 
 .cohort-container {
