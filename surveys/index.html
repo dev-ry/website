@@ -83,87 +83,7 @@
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/prosperxo_header.css" />
     <link rel="stylesheet" href="../assets/css/prosperxo_footer.css" />
-
-    <!-- Inline modal & cursor CSS -->
-    <style>
-      .share-modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: none;
-        z-index: 1000;
-      }
-
-      .share-modal.is-open {
-        display: block;
-      }
-
-      .share-modal__backdrop {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-      }
-
-      .share-modal__content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: radial-gradient(
-            circle at 15% 20%,
-            #ec678c 0%,
-            transparent 40%
-          ),
-          radial-gradient(circle at 85% 85%, #69d6e4 0%, transparent 50%),
-          linear-gradient(
-            135deg,
-            #ec678c 0%,
-            #c177c3 5%,
-            #5d95eb 10%,
-            #69d6e4 95%,
-            #f3b86a 100%
-          );
-        border-radius: 8px;
-        padding: 1.5rem;
-        width: 320px;
-        color: #ffe94f;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        text-align: center;
-      }
-
-      .share-modal__close {
-        position: absolute;
-        top: 0.5rem;
-        right: 0.5rem;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-      }
-
-      .share-modal__buttons {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin-top: 1rem;
-      }
-
-      .share-modal__buttons .footer-icon {
-        width: 32px;
-        height: 32px;
-        display: inline-block;
-      }
-
-      /* make all .btns show the hand cursor on hover */
-      .btn:hover {
-        cursor: pointer;
-      }
-    </style>
+    <link rel="stylesheet" href="../assets/css/prosperxo_share_modal.css" />
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -415,30 +335,10 @@
       </div>
     </div>
 
-    <script src="../assets/js/hamburger-menu.js"></script> <!-- Updated path to hamburger-menu.js -->
+    <!-- Hamburger menu -->
+    <script src="../assets/js/hamburger-menu.js"></script> 
 
-    <script>
-      const shareBtn = document.getElementById("openShare");
-      const modal = document.getElementById("shareModal");
-      const closeBtn = modal.querySelector(".share-modal__close");
-      const fbLink = document.getElementById("shareFacebook");
-      const twLink = document.getElementById("shareTwitter");
-      const liLink = document.getElementById("shareLinkedIn");
-
-      shareBtn.addEventListener("click", () => {
-        const pageUrl = encodeURIComponent(window.location.href);
-        fbLink.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
-        twLink.href = `https://twitter.com/intent/tweet?url=${pageUrl}`;
-        liLink.href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
-        modal.classList.add("is-open");
-      });
-
-      closeBtn.addEventListener("click", () =>
-        modal.classList.remove("is-open")
-      );
-      modal
-        .querySelector(".share-modal__backdrop")
-        .addEventListener("click", () => modal.classList.remove("is-open"));
-    </script>
+    <!-- Share on socials -->
+    <script src="../assets/js/share-on-socials.js"></script>
   </body>
 </html>
