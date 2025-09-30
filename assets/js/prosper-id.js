@@ -9,8 +9,6 @@ async function loadUserData(id) {
     const res = await fetch("/assets/data/users.json");
     const data = await res.json();
     const user = data[id];
-    console.log('User data:', user);
-    console.log('ID:', id);
 
     if (!user) {
       console.error('User not found for ID:', id);
@@ -23,7 +21,7 @@ async function loadUserData(id) {
     
     // Debug: Check if elements exist
     const userNameEl = document.getElementById("userName");
-    console.log('userName element:', userNameEl);
+
     if (!userNameEl) {
       console.error('Could not find element with id "userName"');
     }
@@ -73,7 +71,6 @@ async function loadUserData(id) {
 // Wait for the DOM to be fully loaded before running the script
 document.addEventListener('DOMContentLoaded', function() {
   const id = getQueryParam("id") || "0";
-  console.log('DOM fully loaded, loading user data for ID:', id);
   loadUserData(id);
 });
 
@@ -498,9 +495,6 @@ function setupLeadForm() {
           timestamp: new Date().toISOString(),
         }).toString();
 
-        // Log the data being sent
-        console.log("Submitting form data:", payload);
-
         // Send data to Google Apps Script
         const response = await fetch(
           "https://script.google.com/macros/s/AKfycbw6s-gpUrH2PAc9Pl4ta9k8AnMQG-vBkwlVEU__3mngfTncOE7WpvSle3Y_lx9GzC9Q/exec",
@@ -513,9 +507,6 @@ function setupLeadForm() {
             body: payload,
           }
         );
-
-        // Log the response
-        console.log("Form submission response:", response);
 
         // Show success message
         document.getElementById("modalTitle").textContent =
