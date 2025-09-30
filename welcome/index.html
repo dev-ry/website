@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="../assets/css/styles.css"> <!-- Updated path to styles.css -->
   <link rel="stylesheet" href="../assets/css/prosperxo_header.css">
   <link rel="stylesheet" href="../assets/css/prosperxo_footer.css">
-
+  <link rel="stylesheet" href="../assets/css/prosperxo_share_modal.css">
+  
   <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon-multi.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="48x48" href="../assets/favicon/favicon-48x48.png">
@@ -183,6 +184,16 @@
       <a href="https://forms.gle/nMoYZT6Eb5v1i7Vh7" class="btn yellow" target="_blank">Brand</a>
       <a href="https://forms.gle/qY3A2TAucn7S5p1t6" class="btn blue" target="_blank">Fan</a>
     </div>
+    <!-- Share CTA and button -->
+    <p class="text-white mt-6 md:mt-12 mb-6 text-2xl md:text-3xl">
+      Share with someone you know!
+    </p>
+    <button
+      id="openShare"
+      class="btn yellow text-lg py-3 px-8 mx-auto rounded-lg"
+    >
+      Share
+    </button>
   </section>
 
   <section class="why-artists-section">
@@ -321,8 +332,48 @@
     </div>
   </footer>
 
-  <script src="../assets/js/hamburger-menu.js"></script> <!-- Updated path to hamburger-menu.js -->
+  <!-- Share Modal -->
+  <div id="shareModal" class="share-modal">
+    <div class="share-modal__backdrop"></div>
+    <div class="share-modal__content">
+      <button class="share-modal__close" aria-label="Close modal">
+        &times;
+      </button>
+      <h2>Share Surveys</h2>
+      <div class="share-modal__buttons">
+        <a
+          id="shareFacebook"
+          href="#"
+          class="footer-icon facebook"
+          aria-label="Facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+        ></a>
+        <a
+          id="shareTwitter"
+          href="#"
+          class="footer-icon x"
+          aria-label="X"
+          target="_blank"
+          rel="noopener noreferrer"
+        ></a>
+        <a
+          id="shareLinkedIn"
+          href="#"
+          class="footer-icon linkedin"
+          aria-label="LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
+        ></a>
+      </div>
+    </div>
+  </div>
 
+  <!-- Hamburger menu --> 
+  <script src="../assets/js/hamburger-menu.js"></script>
+
+  <!-- Share on socials -->
+  <script src="../assets/js/share-on-socials.js"></script>
 
 </body>
 
