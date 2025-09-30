@@ -873,31 +873,6 @@ p {
     display: flex;
   }
 
-  .header-menu {
-    display: none;
-    position: fixed;
-    top: 80px; /* Reduced from 100px to sit right below the header */
-    left: 0;
-    width: 100%;
-    background: linear-gradient(135deg, #fcff00, #ff796c, #b729a4);
-    padding: 0;
-    z-index: 1000; /* Ensure it stays above other content */
-    z-index: 1000;
-    text-align: center;
-  }
-
-  .header-menu.open {
-    display: block;
-  }
-
-  .header-menu.open .header-right {
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-
   .rainbow-top,
   .rainbow-bottom {
     width: 100%;
