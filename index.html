@@ -73,30 +73,6 @@
     </div>
 
     <script src="assets/js/script.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const video = document.getElementById('terminalVideo');
-            const controls = document.querySelector('.video-controls');
-            const btn = document.getElementById('playPauseBtn');
-            const wrapper = video.closest('.tv-video');
-
-            // ▶︎ click: hide controls & play
-            btn.addEventListener('click', e => {
-                e.stopPropagation();
-                controls.classList.add('controls--hidden');
-                video.play();
-            });
-
-            // wrapper click: if playing, pause & show ▶︎
-            wrapper.addEventListener('click', () => {
-                if (!video.paused) {
-                    video.pause();
-                    controls.classList.remove('controls--hidden');
-                    btn.textContent = 'PLAY ▶︎';
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>

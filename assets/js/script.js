@@ -27,21 +27,35 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const video = document.getElementById("terminalVideo");
-const button = document.getElementById("playPauseBtn");
+// Video controls functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("terminalVideo");
+  const controls = document.querySelector(".video-controls");
+  const btn = document.getElementById("playPauseBtn");
+  const wrapper = video?.closest(".tv-video");
 
-button.addEventListener("click", () => {
-  if (video.paused) {
-    video.muted = false;
-    video.play();
-    button.textContent = "❚❚";
-  } else {
-    video.pause();
-    button.textContent = "▶︎";
+  if (video && controls && btn && wrapper) {
+    // ▶︎ click: hide controls & play (with sound)
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      controls.classList.add("controls--hidden");
+      video.muted = false; // Enable sound
+      video.play();
+    });
+
+    // wrapper click: if playing, pause & show ▶︎
+    wrapper.addEventListener("click", () => {
+      if (!video.paused) {
+        video.pause();
+        controls.classList.remove("controls--hidden");
+        btn.textContent = "PLAY ▶︎";
+      }
+    });
+
+    // Reset button to ▶︎ when video ends
+    video.addEventListener("ended", () => {
+      controls.classList.remove("controls--hidden");
+      btn.textContent = "PLAY ▶︎";
+    });
   }
-});
-
-// ✅ Reset button to ▶︎ when video ends
-video.addEventListener("ended", () => {
-  button.textContent = "▶︎";
 });
