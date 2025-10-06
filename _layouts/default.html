@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% if page.title %}{{ page.title }} - {% endif %}Prosper XO</title>
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/prosperxo_header.css' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/prosperxo_footer.css' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/styles.css' | relative_url }}"
+    />
+    {% if page.layout == 'post' or page.layout == 'blog' %}
+    <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}" />
+    {% endif %}
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ '/assets/favicon/favicon-multi.ico' | relative_url }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ '/assets/favicon/favicon-32x32.png' | relative_url }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="{{ '/assets/favicon/favicon-48x48.png' | relative_url }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="{{ '/assets/favicon/favicon-96x96.png' | relative_url }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="128x128"
+      href="{{ '/assets/favicon/favicon-128x128.png' | relative_url }}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ '/assets/favicon/favicon-180x180.png' | relative_url }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="{{ '/assets/favicon/favicon-192x192.png' | relative_url }}"
+    />
+    <link
+      rel="manifest"
+      href="{{ '/assets/favicon/site.webmanifest' | relative_url }}"
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="{% if page.title %}{{ page.title }}{% else %}PROSPER XO{% endif %}"
+    />
+    <meta
+      property="og:description"
+      content="{% if page.summary %}{{ page.summary }}{% else %}We're building something exciting to put artists back at the center of the industry. Stay tuned!{% endif %}"
+    />
+    <meta
+      property="og:image"
+      content="{% if page.cover_image %}{{ page.cover_image | absolute_url }}{% else %}{{ '/assets/thumbnail/prosper-website-thumbnail.jpg' | absolute_url }}{% endif %}"
+    />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta
+      property="og:type"
+      content="{% if page.layout == 'post' %}article{% else %}website{% endif %}"
+    />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="{% if page.title %}{{ page.title }}{% else %}PROSPER XO{% endif %}"
+    />
+    <meta
+      name="twitter:description"
+      content="{% if page.summary %}{{ page.summary }}{% else %}We're building something exciting to put artists back at the center of the industry. Stay tuned!{% endif %}"
+    />
+    <meta
+      name="twitter:image"
+      content="{% if page.cover_image %}{{ page.cover_image | absolute_url }}{% else %}{{ '/assets/thumbnail/prosper-website-thumbnail.jpg' | absolute_url }}{% endif %}"
+    />
+    <meta name="twitter:url" content="{{ page.url | absolute_url }}" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-E00NWTHP4Q"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-E00NWTHP4Q");
+    </script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div id="header-top-bottom-container">
+        <div class="header-top">
+          <div class="logo-container">
+            <div class="logo-xo">
+              <a href="{{ '/' | relative_url }}">
+                <img
+                  src="{{ '/assets/logos/prosper-website-logo.png' | relative_url }}"
+                  alt="XO"
+                />
+              </a>
+            </div>
+            <div class="hamburger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <!--Social Media-->
+          <div class="social-icons">
+            <a
+              href="https://instagram.com/prosperxo"
+              aria-label="Instagram"
+              target="_blank"
+            >
+              <img
+                src="{{ '/assets/icons/prosper-website-social-ig.svg' | relative_url }}"
+                alt="Instagram"
+              />
+            </a>
+            <a
+              href="https://x.com/prosperxoxoxo"
+              aria-label="X"
+              target="_blank"
+            >
+              <img
+                src="{{ '/assets/icons/prosper-website-social-x.svg' | relative_url }}"
+                alt="X"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/prosper-xo/"
+              aria-label="LinkedIn"
+              target="_blank"
+            >
+              <img
+                src="{{ '/assets/icons/prosper-website-social-linkedin.svg' | relative_url }}"
+                alt="LinkedIn"
+              />
+            </a>
+            <a
+              href="https://youtube.com/@prosperxo"
+              aria-label="YouTube"
+              target="_blank"
+            >
+              <img
+                src="{{ '/assets/icons/prosper-website-social-youtube.svg' | relative_url }}"
+                alt="YouTube"
+              />
+            </a>
+            <a
+              href="https://facebook.com/prosperxo"
+              aria-label="Facebook"
+              target="_blank"
+            >
+              <img
+                src="{{ '/assets/icons/prosper-website-social-fb.svg' | relative_url }}"
+                alt="Facebook"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="header-bottom-nav">
+          <nav class="text-nav">
+            <a
+              href="{{ '/why-prosper' | relative_url }}"
+              class="text-nav-link text-nav-why"
+              >WHY PROSPER</a
+            >
+            <a
+              href="{{ '/team' | relative_url }}"
+              class="text-nav-link text-nav-team"
+              >TEAM</a
+            >
+            <a
+              href="{{ '/ethos' | relative_url }}"
+              class="text-nav-link text-nav-ethos"
+              >ETHOS</a
+            >
+            <a
+              href="{{ '/events' | relative_url }}"
+              class="text-nav-link text-nav-events"
+              >EVENTS</a
+            >
+            <a
+              href="{{ '/get-involved' | relative_url }}"
+              class="text-nav-link text-nav-involved"
+              >GET INVOLVED</a
+            >
+            <a
+              href="{{ '/blog' | relative_url }}"
+              class="text-nav-link text-nav-blog"
+              >BLOG</a
+            >
+          </nav>
+          <!-- Text-based Secondary Navigation Bar -->
+          <div class="secondary-nav">
+            <a href="{{ '/why-prosper' | relative_url }}" class="text-nav-why"
+              >WHY PROSPER</a
+            >
+            <a href="{{ '/team' | relative_url }}" class="text-nav-team"
+              >TEAM</a
+            >
+            <a href="{{ '/ethos' | relative_url }}" class="text-nav-ethos"
+              >ETHOS</a
+            >
+            <a href="{{ '/events' | relative_url }}" class="text-nav-events"
+              >EVENTS</a
+            >
+            <a
+              href="{{ '/get-involved' | relative_url }}"
+              class="text-nav-involved"
+              >GET INVOLVED</a
+            >
+            <a href="{{ '/blog' | relative_url }}" class="text-nav-blog"
+              >BLOG</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>{{ content }}</main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="footer-text">WE WANT TO HEAR FROM YOU</p>
+        <div class="footer-contact">
+          <div class="footer-column">
+            <p class="press-inquiries">
+              PRESS INQUIRIES
+              <a href="mailto:press@prosperxo.com">press@prosperxo.com</a>
+            </p>
+          </div>
+          <div class="footer-column">
+            <p class="get-involved">
+              GET INVOLVED
+              <a href="mailto:info@prosperxo.com">info@prosperxo.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://www.tiktok.com/@prosper_xo_"
+            aria-label="tiktok"
+            target="_blank"
+          >
+            <img
+              src="{{ '/assets/icons/prosper-website-social-tiktok.svg' | relative_url }}"
+              alt="tiktok"
+            />
+          </a>
+          <a
+            href="https://instagram.com/prosperxo"
+            aria-label="Instagram"
+            target="_blank"
+          >
+            <img
+              src="{{ '/assets/icons/prosper-website-social-ig.svg' | relative_url }}"
+              alt="Instagram"
+            />
+          </a>
+          <a href="https://x.com/prosperxoxoxo" aria-label="X" target="_blank">
+            <img
+              src="{{ '/assets/icons/prosper-website-social-x.svg' | relative_url }}"
+              alt="X"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/prosper-xo/"
+            aria-label="LinkedIn"
+            target="_blank"
+          >
+            <img
+              src="{{ '/assets/icons/prosper-website-social-linkedin.svg' | relative_url }}"
+              alt="LinkedIn"
+            />
+          </a>
+          <a
+            href="https://youtube.com/@prosperxo"
+            aria-label="YouTube"
+            target="_blank"
+          >
+            <img
+              src="{{ '/assets/icons/prosper-website-social-youtube.svg' | relative_url }}"
+              alt="YouTube"
+            />
+          </a>
+          <a
+            href="https://facebook.com/prosperxo"
+            aria-label="Facebook"
+            target="_blank"
+          >
+            <img
+              src="{{ '/assets/icons/prosper-website-social-fb.svg' | relative_url }}"
+              alt="Facebook"
+            />
+          </a>
+        </div>
+        <div class="footer-logo">
+          <img
+            src="{{ '/assets/logos/prosperxo-website-logo-melty-rainbow.png' | relative_url }}"
+            alt="Prosper XO"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ '/assets/js/hamburger-menu.js' | relative_url }}"></script>
+  </body>
+</html>

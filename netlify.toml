@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "npm install && npm run build"
+  command = "bundle install && bundle exec jekyll build --destination . && npm install && npm run build:posts"
 
 # Redirect rules for SPA routing (if needed)
 [[redirects]]
