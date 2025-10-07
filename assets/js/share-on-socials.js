@@ -6,7 +6,8 @@ const twLink = document.getElementById("shareTwitter");
 const liLink = document.getElementById("shareLinkedIn");
 
 shareBtn.addEventListener("click", () => {
-  const pageUrl = window.location.href;
+  // hardcoded to surveys page for now - TODO: make this dynamic if more shared pages are added
+  const pageUrl = "https://prosperxo.com/surveys"; 
   fbLink.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
   twLink.href = `https://twitter.com/intent/tweet?url=${pageUrl}`;
   liLink.href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
