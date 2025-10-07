@@ -4,7 +4,9 @@
   "description": "Prosper XO website with blog posts",
   "main": "index.js",
   "scripts": {
-    "build": "node scripts/build-posts.js",
+    "build": "bash scripts/build-site.sh",
+    "build:posts": "node scripts/build-posts.js",
+    "build:jekyll": "node scripts/build-jekyll.js",
     "dev": "npm run build && python -m http.server 8000",
     "preview": "python -m http.server 8000"
   },
