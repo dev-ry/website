@@ -18,7 +18,8 @@
       rel="stylesheet"
       href="{{ '/assets/css/styles.css' | relative_url }}"
     />
-    {% if page.layout == 'post' or page.layout == 'blog' %}
+    {% if page.layout == 'post' or page.layout == 'blog' or page.title == 'Blog'
+    %}
     <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}" />
     {% endif %}
 
