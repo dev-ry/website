@@ -15,32 +15,11 @@ permalink: /blog/:year/:month/:day/:title/
 # Use Jekyll's default _posts directory
 # No collections needed - Jekyll automatically processes _posts
 
-# Exclude directories from Jekyll processing
-# This ensures your static HTML/CSS/JS files are not processed
-exclude:
-  - node_modules
-  - scripts
-  - cms
-  - assets/graphics
-  - assets/placeholders
-  - assets/posters
-  - assets/text
-  - assets/thumbnail
-  - assets/vcards
-  - assets/video
-  - assets/definitions
-  - assets/letters
-  - assets/header_footer_code_templates
-  - assets/data
-  - staging-wip
-  - README-BUILD.md
-  - package.json
-  - package-lock.json
-  - sitemap.xml
-  - robots.txt
-  - CNAME
-  - 404.html
-  - beta-signup
+# Keep static files in _site (they're copied there before Jekyll runs)
+keep_files:
+  - index.html
+  - welcome
+  - team
   - ethos
   - events
   - faq
@@ -51,15 +30,31 @@ exclude:
   - next-event
   - qr
   - surveys
-  - team
-  - welcome
   - why-prosper
   - xo-insider
+  - beta-signup
+  - content
+  - assets
+  - 404.html
+  - CNAME
+  - robots.txt
+  - sitemap.xml
 
-# Include only what we need for the blog
-include:
-  - assets/blog/uploads
-  - assets/blog/posts
+# Exclude files from Jekyll processing
+exclude:
+  - node_modules
+  - vendor
+  - scripts
+  - cms
+  - staging-wip
+  - README-BUILD.md
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+  - docker-jekyll.sh
+  - JEKYLL-INTEGRATION.md
+  - .github
 
 # Default front matter
 defaults:
