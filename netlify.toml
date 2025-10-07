@@ -2,12 +2,6 @@
   publish = "_site"
   command = "bundle install && npm install && npm run build"
 
-# Redirect rules for SPA routing (if needed)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 # Headers for better caching
 [[headers]]
   for = "/assets/*"
