@@ -8,8 +8,8 @@ const liLink = document.getElementById("shareLinkedIn");
 shareBtn.addEventListener("click", () => {
   // hardcoded to surveys page for now - TODO: make this dynamic if more shared pages are added
   const pageUrl = "https://prosperxo.com/surveys"; 
-  fbLink.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
-  twLink.href = `https://twitter.com/intent/tweet?url=${pageUrl}`;
+  fbLink.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}&quote=Shape%20your%20future%2C%20share%20your%20voice%20%E2%80%94%20take%20this%20quick%20survey!`;
+  twLink.href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=Shape+your+future,+share+your+voice+—+take+this+quick+survey!`;
   liLink.href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
   modal.classList.add("is-open");
 });
