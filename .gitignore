@@ -23,6 +23,7 @@ yarn-error.log*
 # Build outputs
 dist/
 build/
+_site/
 *.log
 
 # Environment files
