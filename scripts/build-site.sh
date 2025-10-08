@@ -23,6 +23,7 @@ rsync -av --exclude='_site' \
           --exclude='_config.yml' \
           --exclude='docker-jekyll.sh' \
           --exclude='scripts' \
+          --exclude='.github' \
           . _site/
 
 # Step 3: Build Jekyll blog (this will add blog files to _site)
