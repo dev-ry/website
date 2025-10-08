@@ -2,6 +2,13 @@
   publish = "_site"
   command = "bundle install && npm install && npm run build"
 
+# Redirect Netlify subdomain to custom domain
+[[redirects]]
+  from = "https://prosper-xo-blog.netlify.app/*"
+  to = "https://prosperxo.com/:splat"
+  status = 301
+  force = true
+
 # Headers for better caching
 [[headers]]
   for = "/assets/*"
