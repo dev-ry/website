@@ -18,6 +18,7 @@ rsync -av --exclude='_site' \
           --exclude='_posts' \
           --exclude='_layouts' \
           --exclude='_includes' \
+          --exclude='blog.html' \
           --exclude='Gemfile*' \
           --exclude='_config.yml' \
           --exclude='docker-jekyll.sh' \
