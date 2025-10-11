@@ -31,7 +31,7 @@
 
 /* Text column */
 .event-details {
-  flex: 1 1 500px;
+  /*flex: 1 1 500px; */
   text-align: left;
 }
 
@@ -135,6 +135,38 @@
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 5px;
+}
+
+.past-events-container {
+  position: relative;
+  background-color: #7314ca;
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+.past-text p {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #ffffff;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
+.past-flyers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.past-flyers img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  padding: 10px;
   border-radius: 5px;
 }
 
