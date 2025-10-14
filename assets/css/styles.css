@@ -566,6 +566,8 @@ p {
 .poster:hover {
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
   /* Outer glow effect */
+  transform: translateZ(0);
+  /* Force GPU acceleration and prevent layout shift */
 }
 
 /* Poster links */
@@ -587,8 +589,8 @@ p {
 
 /* Scale image on hover */
 .poster:hover img {
-  transform: scale(1.05);
-  /* Scale to 105% */
+  transform: scale(1.03);
+  /* Scale to 103% */
 }
 
 /* Responsive Design for Mobile */

@@ -160,14 +160,18 @@
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
+  gap: 20px;
 }
 
-.past-flyers img {
+.past-flyers .poster {
   max-width: 300px;
   width: 100%;
+}
+
+.past-flyers .poster img {
+  width: 100%;
   height: auto;
-  padding: 10px;
-  border-radius: 5px;
+  display: block;
 }
 
 /* Gradient call-to-action block */
