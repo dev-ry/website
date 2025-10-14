@@ -112,8 +112,7 @@
 }
 
 .text-nav .text-nav-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
 }
 
 /* Text navigation link colors */
@@ -125,28 +124,56 @@
   color: #ec0caa; /* Fallback color */
 }
 
+.text-nav-why:hover {
+  -webkit-text-fill-color: #ffef09;
+}
+
 .text-nav-team {
   color: #fa2dfd !important;
+}
+
+.text-nav-team:hover {
+  color: #ffef09 !important;
 }
 
 .text-nav-ethos {
   color: #44fe7a !important;
 }
 
+.text-nav-ethos:hover {
+  color: #ffef09 !important;
+}
+
 .text-nav-events {
   color: #2ff5ff !important;
+}
+
+.text-nav-events:hover {
+  color: #ffef09 !important;
 }
 
 .text-nav-involved {
   color: #ffb344 !important;
 }
 
+.text-nav-involved:hover {
+  color: #ffef09 !important;
+}
+
 .text-nav-press {
   color: #FF4545 !important;
 }
 
+.text-nav-press:hover {
+  color: #ffef09 !important;
+}
+
 .text-nav-insider {
   color: #d674ff !important;
+}
+
+.text-nav-insider:hover {
+  color: #ffef09 !important;
 }
 
 /* Mobile menu styles - nav menu */
