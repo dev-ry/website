@@ -58,7 +58,10 @@ p {
 
 /* Beta Sign-Up Page Specific Styles */
 .beta-signup-container {
-  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -67,7 +70,7 @@ p {
 
 .beta-signup-title {
   font-family: "Feu de camp Timber", serif;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
   color: #ffef09;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
@@ -75,6 +78,10 @@ p {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 0 auto 1.5rem auto;
+}
+
+.beta-title-desc {
+  max-width: 800px;
 }
 
 #cohort-info {
@@ -86,6 +93,7 @@ p {
 
 .cohort-container {
   margin: 1rem;
+  max-width: 800px;
 }
 
 .cohort-type {
