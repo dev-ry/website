@@ -82,7 +82,7 @@
 /* Portrait mobile devices only */
 @media (max-width: 768px) and (orientation: portrait) {
     .event-body-head {
-        text-align: left;
+        text-align: center;
     }
 
     .event-title {
