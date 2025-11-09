@@ -178,6 +178,8 @@
 }
 
 .past-text p {
+  display: flex;
+  justify-content: center;
   font-size: 2.2rem;
   font-weight: 600;
   line-height: 1.2;
@@ -273,5 +275,9 @@
 
   .event-image img {
     margin-bottom: 2rem;
+  }
+
+  .past-text p {
+    font-size: 1.5rem;
   }
 }
