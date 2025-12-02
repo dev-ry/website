@@ -23,7 +23,7 @@
 .event-flex {
   display: flex;
   gap: 3.5rem;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   max-width: 1300px;
   margin: 0 auto;
