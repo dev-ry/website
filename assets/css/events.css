@@ -23,7 +23,7 @@
 .event-flex {
   display: flex;
   gap: 3.5rem;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   max-width: 1300px;
   margin: 0 auto;
@@ -54,11 +54,17 @@
 }
 
 .event-body-head {
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: normal;
   line-height: 1.6;
   color: #fff;
   text-align: left;
+}
+
+.event-body-head a:hover {
+  transition: all .25s;
+  color:#ff008c;
+  font-size: 1.3rem;
 }
 
 .event-body-list {
@@ -91,7 +97,8 @@
 }
 
 .event-body {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   line-height: 1.6;
   color: #fff;
   margin-bottom: 1.5rem;
@@ -135,6 +142,11 @@
   text-align: left;
 }
 
+.speaker-info a:hover {
+  transition: all .25s;
+  color:#ffef5e;
+}
+
 /* Portrait mobile devices only */
 @media (max-width: 768px) and (orientation: portrait) {
     .event-body {
@@ -144,6 +156,11 @@
     .event-speakers {
       text-align: justify;
       font-size: 1.2rem;
+    }
+
+    .speaker-info p {
+    font-size: 1rem;
+    line-height: 1.2;
     }
 
 }
@@ -178,8 +195,6 @@
 }
 
 .past-text p {
-  display: flex;
-  justify-content: center;
   font-size: 2.2rem;
   font-weight: 600;
   line-height: 1.2;
@@ -222,7 +237,6 @@
   padding: 4rem 2rem;
   color: white;
   width: 100%;
-  text-align: center;
 }
 
 .follow-box .follow-inner {
@@ -276,9 +290,5 @@
 
   .event-image img {
     margin-bottom: 2rem;
-  }
-
-  .past-text p {
-    font-size: 1.5rem;
   }
 }
