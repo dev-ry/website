@@ -6,6 +6,12 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: "Feu de camp Timber";
+  src: url("../fonts/feudecamp-timber-webfont.woff2") format("woff2");
+  font-display: block;
+}
+
 html,
 body {
   /* let the gradient fill the viewport */
@@ -96,11 +102,11 @@ p {
 
 .hero-text {
   max-width: 900px;
-  font-family: poppins;
-  color: #fff;
-  font-size: 1.5rem;
+  font-family: Feu de camp Timber;
+  color: #fff200;
+  font-size: 1.25rem;
   line-height: 1.7;
-  text-shadow: 2px .5px rgb(124, 124, 124);
+  text-shadow: 2px 2px rgb(0, 0, 0);
 }
 
 .logo {
