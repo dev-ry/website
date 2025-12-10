@@ -94,6 +94,15 @@ p {
   justify-content: center;
 }
 
+.hero-text {
+  max-width: 900px;
+  font-family: poppins;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  text-shadow: 2px .5px rgb(124, 124, 124);
+}
+
 .logo {
   height: 50px;
   transition: transform 0.3s ease;
@@ -247,6 +256,11 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+    line-height: 1.3;
   }
 }
 
