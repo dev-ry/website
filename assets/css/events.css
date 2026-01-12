@@ -242,6 +242,7 @@
 .follow-box .follow-inner {
   max-width: 960px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .follow-text {
