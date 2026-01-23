@@ -214,13 +214,13 @@
 }
 
 .past-flyers .poster {
-  max-width: 300px;
-  width: 100%;
+  height: 400px;
+  width: auto;
 }
 
 .past-flyers .poster img {
-  width: 100%;
-  height: auto;
+  height: 100%;
+  width: auto;
   display: block;
 }
 
