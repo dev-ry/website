@@ -4,13 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sponsorship</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: 'Feu';
+            src: url('../assets/fonts/feudecamp-timber-webfont.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         img { display: block; width: 100%; }
+
+        .slide {
+            background: #000;
+            color: #fff;
+            width: 100%;
+        }
+
+        /* ——— SLIDE 1 ——— */
+        .slide-1 {
+            padding: 5% 6%;
+        }
+
+        .slide-1-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .slide-1-header h1 {
+            font-family: 'Feu', sans-serif;
+            color: #FFD600;
+            font-size: clamp(1.4rem, 3.5vw, 3rem);
+            line-height: 1.05;
+            text-transform: uppercase;
+            max-width: 65%;
+        }
+
+        .slide-1-header .logo {
+            width: clamp(140px, 25vw, 320px);
+            height: auto;
+        }
+
+        .slide-1-body {
+            text-align: center;
+            padding: 6% 4% 5%;
+        }
+
+        .slide-1-body h2 {
+            font-family: 'Feu', sans-serif;
+            font-size: clamp(1.4rem, 3.5vw, 2.8rem);
+            text-transform: uppercase;
+            margin-bottom: 0.8em;
+            letter-spacing: 0.05em;
+        }
+
+        .slide-1-body p {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(0.85rem, 1.8vw, 1.15rem);
+            line-height: 1.6;
+            max-width: 750px;
+            margin: 0 auto 1.2em;
+        }
+
+        .slide-1-body ul {
+            list-style: none;
+            padding: 0.8em 0;
+        }
+
+        .slide-1-body ul li {
+            font-family: 'Feu', sans-serif;
+            color: #FFD600;
+            font-size: clamp(0.9rem, 2.2vw, 1.3rem);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            line-height: 1.8;
+        }
+
+        .slide-1-body ul li::before {
+            content: "• ";
+        }
     </style>
 </head>
 <body>
-    <img src="prosperxo-sponsorshipdeck-weblayout-example1.jpg" alt="">
+
+    <!-- SLIDE 1 -->
+    <section class="slide slide-1">
+        <div class="slide-1-header">
+            <h1>Sponsors &amp; Partner Opportunities 2026</h1>
+            <img class="logo" src="prosperxo-sponsorshipdeck-logo.png" alt="Prosper XO">
+        </div>
+        <div class="slide-1-body">
+            <h2>Who We Are</h2>
+            <p>Prosper XO is an artist-first ethical technology company and cultural policy initiative, building the operating system for the creative economy.</p>
+            <p>We operate at the intersection of:</p>
+            <ul>
+                <li>Public Education</li>
+                <li>Community-Led Cultural Programming</li>
+                <li>Policy Advocacy</li>
+                <li>Ethical Technology Development</li>
+            </ul>
+            <p>Our work is grounded in lived artist experience, academic research, and civic collaboration. This deck focuses on what is already live and in motion today, and how sponsors and partners can support and grow alongside it.</p>
+        </div>
+    </section>
+
     <img src="prosperxo-sponsorshipdeck-weblayout-example2.jpg" alt="">
     <img src="prosperxo-sponsorshipdeck-weblayout-example3.jpg" alt="">
     <img src="prosperxo-sponsorshipdeck-weblayout-example4.jpg" alt="">
