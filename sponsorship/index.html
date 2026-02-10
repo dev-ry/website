@@ -15,6 +15,7 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         img { display: block; width: 100%; }
+        img.photo { width: auto; height: auto; }
 
         .slide {
             background: #000;
@@ -85,6 +86,171 @@
         .slide-1-body ul li::before {
             content: "• ";
         }
+
+        /* ——— SLIDE 2 ——— */
+        .slide-2 {
+            background: #4A90B0;
+            color: #000;
+            padding: 5% 6%;
+        }
+
+        .slide-2-top {
+            display: flex;
+            gap: 4%;
+            align-items: stretch;
+            margin-bottom: 2em;
+        }
+
+        .slide-2-top-text {
+            flex: 1;
+        }
+
+        .slide-2-top-text h2 {
+            font-family: 'Feu', sans-serif;
+            font-size: clamp(1.6rem, 4vw, 3rem);
+            text-transform: uppercase;
+            margin-bottom: 0.6em;
+        }
+
+        .slide-2-top-text p {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(0.8rem, 1.6vw, 1.05rem);
+            line-height: 1.6;
+            margin-bottom: 1em;
+        }
+
+        .slide-2-top .photo {
+            width: 45%;
+            flex-shrink: 0;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
+        }
+
+        .slide-2 h3 {
+            font-family: 'Feu', sans-serif;
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            text-transform: uppercase;
+            margin: 1.5em 0 0.5em;
+            color: #000;
+            text-align: center;
+        }
+
+        .slide-2 p {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(0.8rem, 1.6vw, 1.05rem);
+            line-height: 1.6;
+            margin-bottom: 0.8em;
+            text-align: center;
+        }
+
+        .slide-2 ul {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(0.8rem, 1.6vw, 1.05rem);
+            line-height: 1.7;
+            padding-left: 1.2em;
+            margin-bottom: 1em;
+        }
+
+        .slide-2-opposite {
+            text-align: center;
+            padding: 2em 0;
+        }
+
+        .slide-2-opposite h3 {
+            font-family: 'Feu', sans-serif;
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            text-transform: uppercase;
+            margin-bottom: 0.6em;
+            color: #000;
+        }
+
+        .slide-2-opposite ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .slide-2-opposite ul li {
+            font-family: 'Feu', sans-serif;
+            color: #000;
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            line-height: 1.8;
+        }
+
+        .slide-2-opposite ul li::before {
+            content: "• ";
+        }
+
+        .slide-2-sponsors {
+            display: flex;
+            gap: 4%;
+            align-items: flex-start;
+            margin: 2em 0;
+        }
+
+        .slide-2-sponsors .photo {
+            width: 40%;
+            flex-shrink: 0;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
+        }
+
+        .slide-2-sponsors-text {
+            flex: 1;
+        }
+
+        .slide-2-sponsors-text h3 {
+            font-family: 'Feu', sans-serif;
+            font-size: clamp(1rem, 2vw, 1.4rem);
+            text-transform: uppercase;
+            margin-top: 0;
+            color: #000;
+        }
+
+        .slide-2-sponsors-text p,
+        .slide-2-sponsors-text ul {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(0.75rem, 1.4vw, 0.95rem);
+            line-height: 1.6;
+        }
+
+        .slide-2-sponsors-text ul {
+            padding-left: 1.2em;
+            margin-bottom: 1em;
+        }
+
+        .slide-2-banner {
+            text-align: center;
+            padding: 2.5em 5% 1em;
+        }
+
+        .slide-2-banner p {
+            font-family: 'Feu', sans-serif;
+            color: #000;
+            font-size: clamp(1rem, 2.8vw, 1.8rem);
+            text-transform: uppercase;
+            line-height: 1.3;
+            letter-spacing: 0.03em;
+        }
+
+        @media (max-width: 600px) {
+            .slide-2-top {
+                flex-direction: column;
+            }
+            .slide-2-top .photo {
+                width: 100%;
+            }
+            .slide-2-sponsors {
+                flex-direction: column;
+            }
+            .slide-2-sponsors .photo {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -109,8 +275,85 @@
         </div>
     </section>
 
-    <img src="prosperxo-sponsorshipdeck-weblayout-example2.jpg" alt="">
+    <!-- divider -->
+    <div style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);"></div>
+
+    <!-- SLIDE 2 -->
+    <section class="slide slide-2">
+
+        <div class="slide-2-top">
+            <div class="slide-2-top-text">
+                <h2>Why This Matters</h2>
+                <p>Artists power culture, but the systems around them extract, exploit, and silence them.</p>
+                <p>Music shapes identity, community, and local economies, yet the people who create it are often the least protected. Artists generate billions in cultural and economic value, while most independent musicians struggle to earn sustainable income. Mental health resources for creatives remain underfunded. Data, labor, and intellectual property are controlled by platforms, not creators, and the public has little visibility into how the industry truly operates.</p>
+                <p>Prosper XO exists to change this through education, cultural infrastructure, and ethical technology</p>
+            </div>
+            <img class="photo" src="prosperxo-sponsorship-photo1.jpg" alt="">
+        </div>
+
+        <h3>Why Sponsorship Matters Now</h3>
+        <p>Prosper XO is intentionally building from the ground up. Our early programs. Town Halls, public education campaigns, media, surveys, and community dialogue, are not separate from our technology work. They are the foundation of it.</p>
+        <p>Sponsorship support allows us to:</p>
+        <ul>
+            <li>Sustain and expand artist-led education and mental-health-aware programming</li>
+            <li>Compensate artists, speakers, and contributors fairly</li>
+            <li>Gather real, consent-based insights from artists, fans, and communities</li>
+            <li>Establish trust, transparency, and ethical standards before technology scales</li>
+            <li>Design systems rooted in lived experience, not extraction</li>
+        </ul>
+
+        <h3 class="no-underline">Building Culture Before Code</h3>
+        <p>Most platforms launch technology first and attempt to fix harm later.</p>
+
+        <div class="slide-2-opposite">
+            <h3>Prosper XO Is Doing the Opposite:</h3>
+            <ul>
+                <li>Listening Before Building</li>
+                <li>Educating Before Scaling</li>
+                <li>Establishing Values Before Monetization</li>
+                <li>Designing Systems With Artists, Not Just For Them</li>
+            </ul>
+        </div>
+
+        <div class="slide-2-sponsors">
+            <img class="photo" src="prosperxo-sponsorship-photo2.jpg" alt="">
+            <div class="slide-2-sponsors-text">
+                <h3>What Early Sponsors Make Possible</h3>
+                <p>Early sponsorship directly fuels:</p>
+                <ul>
+                    <li>Program continuity and growth</li>
+                    <li>Ethical product research and development</li>
+                    <li>Artist-first data governance frameworks</li>
+                    <li>Fair compensation models</li>
+                    <li>Pilot pathways for future Prosper XO technology</li>
+                </ul>
+                <p>What Partners Gain (Without Compromising Values):</p>
+                <ul>
+                    <li>Authentic presence in artist-led spaces</li>
+                    <li>Measurable community reach and engagement</li>
+                    <li>Long-term brand trust (not short-term impressions)</li>
+                    <li>Early access to ethical technology pilots</li>
+                    <li>Cultural relevance that can't be bought through ads</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide-2-banner">
+            <p>By supporting Prosper XO's early programs, sponsors help ensure the technology we build is humane, ethical, and accountable to the people it serves.</p>
+        </div>
+
+    </section>
+
+       <!-- divider -->
+    <div style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);"></div>
+
+
     <img src="prosperxo-sponsorshipdeck-weblayout-example3.jpg" alt="">
-    <img src="prosperxo-sponsorshipdeck-weblayout-example4.jpg" alt="">
+
+    <!-- divider -->
+    <div style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);"></div>
+
+    
+    <div style="width:100%;height:200px;background:#92c741;"></div>
 </body>
 </html>
