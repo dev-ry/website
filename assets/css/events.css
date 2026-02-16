@@ -16,14 +16,13 @@
   background-color: #7314ca;
   color: white;
   width: 100%;
-  padding: 4rem 0rem;
+  padding: 4rem 3rem;
 }
 
 /* Layout wrapper */
 .event-flex {
   display: flex;
-  gap: 3.5rem;
-  justify-content: space-between;
+  gap: 3rem;
   align-items: flex-start;
   max-width: 1300px;
   margin: 0 auto;
@@ -216,14 +215,14 @@
 }
 
 .past-flyers .poster {
-  max-width: 300px;
-  width: 100%;
+  flex: 0 0 auto;
 }
 
 .past-flyers .poster img {
-  width: 100%;
-  height: auto;
+  height: 400px;
+  width: auto;
   display: block;
+  object-fit: cover;
 }
 
 /* Gradient call-to-action block */
