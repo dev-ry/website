@@ -12,6 +12,7 @@ The build system automatically scans all markdown files in `assets/blog/posts/` 
 - `scripts/build-posts.js` - Main build script that scans posts
 - `netlify.toml` - Netlify deployment configuration
 - `assets/blog/posts-index.json` - Generated posts index (created by build script)
+- `scripts/qr-gen/` - QR code generation system for marketing campaigns
 
 ## How It Works
 
@@ -30,10 +31,12 @@ The build system automatically scans all markdown files in `assets/blog/posts/` 
 ## Local Development
 
 ### Prerequisites
+
 - Node.js (version 14 or higher)
 - npm (comes with Node.js)
 
 ### Setup
+
 ```bash
 # Install dependencies
 npm install
@@ -46,6 +49,7 @@ npm run dev
 ```
 
 ### Manual Build
+
 ```bash
 # Just run the build script
 node scripts/build-posts.js
@@ -64,6 +68,7 @@ The `netlify.toml` file is already configured to run the build script on deploym
 ```
 
 **What happens on deployment:**
+
 1. Netlify installs Node.js dependencies (`npm install`)
 2. Runs the build script (`npm run build`)
 3. Generates `posts-index.json`
@@ -84,14 +89,17 @@ npm run build
 ## Adding New Posts
 
 ### Via Decap CMS (Recommended)
+
 1. Go to your CMS admin panel
 2. Create a new post
 3. The post will be saved to `assets/blog/posts/`
 4. On next deployment, the build script will automatically include it
 
 ### Manually
+
 1. Create a new `.md` file in `assets/blog/posts/`
 2. Add frontmatter with required fields:
+
    ```yaml
    ---
    title: "Your Post Title"
@@ -101,9 +109,9 @@ npm run build
    tags: ["tag1", "tag2"]
    cover_image: "/path/to/image.jpg"
    ---
-   
    Your post content here...
    ```
+
 3. Deploy or run `npm run build` locally
 
 ## Build Script Features
@@ -144,16 +152,19 @@ The `posts-index.json` file contains:
 ## Troubleshooting
 
 ### Build Fails
+
 - Check that Node.js is installed
 - Ensure `assets/blog/posts/` directory exists
 - Verify markdown files have valid frontmatter
 
 ### Posts Not Showing
+
 - Check browser console for errors
 - Verify `posts-index.json` was generated
 - Ensure posts are not marked as `draft: true`
 
 ### Frontend Errors
+
 - Check that `posts-index.json` is accessible
 - Verify file paths are correct
 - Check browser network tab for failed requests
@@ -161,14 +172,18 @@ The `posts-index.json` file contains:
 ## Customization
 
 ### Modify Build Script
+
 Edit `scripts/build-posts.js` to:
+
 - Change which posts are included
 - Add custom metadata fields
 - Modify sorting logic
 - Change output format
 
 ### Modify Frontend
+
 Edit `xo-insider/index.html` to:
+
 - Change post display layout
 - Add filtering or search
 - Modify styling
