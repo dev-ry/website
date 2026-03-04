@@ -4,9 +4,24 @@ const path = require("path");
 
 const campaigns = [
   {
-    name: "sxsw2026-wheatpaste",
-    url: "https://www.prosperxo.com?utm_source=wheatpaste&utm_medium=poster&utm_campaign=sxsw2026",
-    description: "SXSW 2026 Wheatpaste Poster",
+    name: "sxsw2026-streams",
+    url: "https://www.prosperxo.com?utm_source=wheatpaste&utm_medium=poster&utm_campaign=sxsw2026&utm_content=streams_dx1",
+    description: "SXSW 2026 - Streams (DX1)",
+  },
+  {
+    name: "sxsw2026-28billion",
+    url: "https://www.prosperxo.com?utm_source=wheatpaste&utm_medium=poster&utm_campaign=sxsw2026&utm_content=28billion_dx2",
+    description: "SXSW 2026 - 28 Billion (DX2)",
+  },
+  {
+    name: "sxsw2026-algo",
+    url: "https://www.prosperxo.com?utm_source=wheatpaste&utm_medium=poster&utm_campaign=sxsw2026&utm_content=algo_dx3",
+    description: "SXSW 2026 - Algo (DX3)",
+  },
+  {
+    name: "sxsw2026-future",
+    url: "https://www.prosperxo.com?utm_source=wheatpaste&utm_medium=poster&utm_campaign=sxsw2026&utm_content=future_dx4",
+    description: "SXSW 2026 - Future (DX4)",
   },
 ];
 
