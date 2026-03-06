@@ -129,6 +129,11 @@
             content: "• ";
         }
 
+        .slide-1-body strong {
+            color: #FFD600;
+            font-weight: 700;
+        }
+
         /* ——— SLIDE 2 ——— */
         .slide-2 {
             background: #4A90B0;
@@ -180,15 +185,28 @@
 
         .slide-2-centered {
             text-align: center;
-            padding: 2em 0;
+            padding: 1.5em 0;
+        }
+
+        .slide-2-centered:last-of-type {
+            padding-bottom: 0;
         }
 
         .slide-2-centered h3 {
             color: #000;
         }
 
+        .slide-2-centered strong {
+            color: #FFD600;
+            font-weight: 700;
+        }
+
+        .slide-2-centered p strong:only-child {
+            color: #000;
+        }
+
         .slide-2-centered h3.no-underline {
-            margin-top: 2em;
+            margin-top: 1.5em;
         }
 
         .slide-2-centered ul {
@@ -204,7 +222,7 @@
             display: flex;
             gap: 4%;
             align-items: stretch;
-            margin: 2em 0;
+            margin: 1.5em 0;
         }
 
         .slide-2-sponsors .photo {
@@ -219,6 +237,15 @@
             flex: 1;
         }
 
+        .slide-2-sponsors-text strong {
+            color: #FFD600;
+            font-weight: 700;
+        }
+
+        .slide-2-sponsors-text p strong:only-child {
+            color: #000;
+        }
+
         .slide-2-sponsors-text h3 {
             color: #000;
         }
@@ -231,7 +258,7 @@
 
         .slide-2-sponsors-columns {
             display: flex;
-            gap: 4em;
+            gap: 2em;
         }
 
         .slide-2-sponsors-columns .col {
@@ -240,7 +267,7 @@
 
         .slide-2-banner {
             text-align: center;
-            padding: 2.5em 5% 1em;
+            padding: 1.5em 5%;
         }
 
         .slide-2-banner p {
@@ -278,6 +305,42 @@
 
             .slide-2-sponsors .photo {
                 width: 100%;
+            }
+
+            .slide-2-sponsors-columns {
+                flex-direction: column;
+                gap: 1.5em;
+            }
+
+            .slide-2-top {
+                gap: 1.5em;
+                text-align: center;
+            }
+
+            .slide-2-sponsors-text {
+                text-align: center;
+            }
+
+            .slide-2 ul {
+                display: inline-block;
+                text-align: left;
+            }
+
+            .slide-2-centered {
+                padding: 1.5em 0;
+            }
+
+            .slide-2-centered:first-of-type {
+                padding-bottom: 0;
+            }
+
+            .slide-2-sponsors {
+                gap: 1.5em;
+                margin: 1.5em 0;
+            }
+
+            .slide-2-banner {
+                padding: 1.5em 2%;
             }
         }
 
@@ -419,18 +482,18 @@
         </div>
         <div class="slide-1-body">
             <h2>Who We Are</h2>
-            <h4>Prosper XO is an artist-first ethical technology company and cultural policy initiative, building the
-                operating system for the creative economy.</h4>
-            <p>We operate at the intersection of:</p>
+            <p>Prosper XO is an artist-first ethical technology public benefit company and education-driven cultural initiative building digital and physical leverage for music labor.</p>
+            <p>Rooted in community and informed by academic collaboration, our work bridges:</p>
             <ul>
-                <li>Public Education</li>
-                <li>Community-Led Cultural Programming</li>
-                <li>Policy Advocacy</li>
-                <li>Ethical Technology Development</li>
+                <li>Ethical technology development</li>
+                <li>Public education and dialogue</li>
+                <li>Community-led cultural programming</li>
+                <li>Uplifting artist and industry voices and lived experiences</li>
+                <li>Measurable economic impact</li>
+                <li>XO TV media production</li>
             </ul>
-            <p>Our work is grounded in lived artist experience, academic research, and civic collaboration. This deck
-                focuses on <span class="highlight-pink">what is already live and in motion today</span>, and how
-                sponsors and partners can support and grow alongside it.</p>
+            <p>This deck reflects what is already <strong>active and in motion</strong>, and how aligned <span class="highlight-yellow">sponsors</span> and <strong>partners can grow alongside it.</strong></p>
+            <p>What you'll see here is not theory, but a living, <strong>expanding cultural infrastructure</strong> model <strong>ready to scale with the right partners.</strong></p>
         </div>
     </section>
 
@@ -459,60 +522,82 @@
         </div>
 
         <div class="slide-2-centered">
-
-
             <h3>Why Sponsorship Matters Now</h3>
             <h4>Prosper XO is intentionally building from the ground up.</h4>
             <p>Our early programs. Town Halls, public education campaigns, media, surveys, and community dialogue, are
                 not
                 separate from our technology work. They are the foundation of it.</p>
-            <p class="text-bold">Sponsorship support allows us to:</p>
-            <ul class="text-bold">
-                <li>Sustain and expand artist-led education and mental-health-aware programming</li>
-                <li>Compensate artists, speakers, and contributors fairly</li>
-                <li>Gather real, consent-based insights from artists, fans, and communities</li>
-                <li>Establish trust, transparency, and ethical standards before technology scales</li>
-                <li>Design systems rooted in lived experience, not extraction</li>
-            </ul>
-
-            <h3 class="no-underline">Building Culture Before Code</h3>
-            <h4>Most platforms launch technology first and attempt to fix harm later.</h4>
-            <p>Prosper XO Is Doing the Opposite:</p>
-            <ul>
-                <li>Listening Before Building</li>
-                <li>Educating Before Scaling</li>
-                <li>Establishing Values Before Monetization</li>
-                <li>Designing Systems With Artists, Not Just For Them</li>
-            </ul>
         </div>
 
         <div class="slide-2-sponsors">
             <img class="photo" src="prosperxo-sponsorship-photo2.jpg" alt="">
             <div class="slide-2-sponsors-text">
-                <h3>What Early Sponsors Make Possible</h3>
-                <div class="slide-2-sponsors-columns">
-                    <div class="col">
-                        <p class="text-bold">Early sponsorship directly fuels:</p>
-                        <ul class="text-bold">
-                            <li>Program continuity and growth</li>
-                            <li>Ethical product research and development</li>
-                            <li>Artist-first data governance frameworks</li>
-                            <li>Fair compensation models</li>
-                            <li>Pilot pathways for future Prosper XO technology</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <p class="text-bold">What Partners Gain (Without Compromising Values):</p>
-                        <ul class="text-bold">
-                            <li>Authentic presence in artist-led spaces</li>
-                            <li>Measurable community reach and engagement</li>
-                            <li>Long-term brand trust (not short-term impressions)</li>
-                            <li>Early access to ethical technology pilots</li>
-                            <li>Cultural relevance that can't be bought through ads</li>
-                        </ul>
-                    </div>
-                </div>
+                <h3 class="no-underline">Building Culture Before Code</h3>
+                <h4>Most platforms launch technology first and attempt to fix harm later.</h4>
+                <p>Prosper XO Is Doing the Opposite:</p>
+                <ul>
+                    <li>Listening Before Building</li>
+                    <li>Educating Before Scaling</li>
+                    <li>Establishing Values Before Monetization</li>
+                    <li>Designing Systems With Artists, Not Just For Them</li>
+                </ul>
             </div>
+        </div>
+
+        <div class="slide-2-centered">
+                <h3>What Early Sponsors Make Possible</h3>
+                <p>Early sponsorship is <strong><i>not</i></strong> <strong>passive support.</strong><br>
+                It is <strong>active participation</strong> in rebuilding the cultural economy.</p>
+                <p>Your investment directly fuels:</p>
+                <p><strong>Artist Storytelling &amp; Visibility</strong></p>
+                <ul>
+                    <li>XO TV media features spotlighting real artist journeys</li>
+                    <li><em>Unmuted</em> one-on-one podcast conversations with artists and industry leaders</li>
+                    <li><em>Unfiltered</em> short documentary artist series</li>
+                </ul>
+                <p><strong>Direct Artist Compensation</strong></p>
+                <ul>
+                    <li>Paying artists featured across our media platforms and events</li>
+                    <li>Fair compensation for guest speakers at our monthly Prosper XO Town Halls</li>
+                </ul>
+                <p><strong>Program Continuity &amp; Growth</strong></p>
+                <ul>
+                    <li>Sustaining our monthly Town Halls and public-facing cultural programming</li>
+                    <li>Expanding access to artist-first education and advocacy</li>
+                </ul>
+                <p><strong>The XO Team Powering the Ecosystem</strong></p>
+                <ul>
+                    <li>Fair pay for the creatives, producers, researchers, technologists, and organizers building this work</li>
+                    <li>Sustainable operational infrastructure to ensure long-term program quality and growth</li>
+                    <li>Ethical leadership and execution behind every activation, campaign, and pilot</li>
+                </ul>
+                <p><strong>Industry Transparency Campaigns</strong></p>
+                <ul>
+                    <li>Social campaigns that uplift industry truths</li>
+                    <li>Mission-aligned merch that amplifies artist advocacy and awareness</li>
+                </ul>
+                <p>Early sponsors are not funding content.<br>
+                They are funding <strong>equity, transparency, and infrastructure.</strong></p>
+        </div>
+
+        <div class="slide-2-centered">
+            <h3>What Partners Gain</h3>
+            <p><em>(Without Compromising Values)</em></p>
+            
+            <p><strong>Authentic Presence in Artist-Led Spaces</strong></p>
+            <p>Be embedded in trusted cultural environments</p>
+            
+            <p><strong>Measurable Community Reach &amp; Engagement</strong></p>
+            <p>Real attendance, participation, and verified engagement data, not vanity metrics.</p>
+            
+            <p><strong>Long-Term Brand Trust</strong></p>
+            <p>Sustained alignment with ethical innovation and artist empowerment.</p>
+            
+            <p><strong>Early Access to Ethical Technology Pilots</strong></p>
+            <p>Be first in line for responsible tech pilots that center transparency and community.</p>
+            
+            <p><strong>Cultural Relevance That Can't Be Bought Through Ads</strong></p>
+            <p>Participation in movements builds legacy. Ads build impressions.</p>
         </div>
 
         <div class="slide-2-centered">
