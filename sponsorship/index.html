@@ -774,15 +774,45 @@
             color: rgba(0, 0, 0, 0.8);
         }
 
-        /* ——— SLIDE 8 & SPONSORSHIP LEVELS ——— */
+        /* ——— SLIDE 8 (What Early Sponsors Make Possible) ——— */
         .slide-8 {
+            background: #000;
+            color: #fff;
+            padding: 5% 6% 4%;
+            text-align: center;
+        }
+
+        .slide-8 .slide-2-centered {
+            padding: 1.5em 0;
+        }
+
+        .slide-8 .slide-2-centered:last-of-type {
+            padding-bottom: 3em;
+        }
+
+        .slide-8 h3 {
+            color: #fff;
+        }
+
+        .slide-8 strong {
+            color: #FFD600;
+            font-weight: 700;
+        }
+
+        .slide-8 ul li::before {
+            color: #fff;
+        }
+
+        /* ——— SLIDE 9 (How Sponsors Can Participate & SPONSORSHIP LEVELS) ——— */
+        .slide-9 {
             background: #250F42;
             color: #fff;
             padding: 5% 6%;
             text-align: center;
         }
 
-        .slide-8-content, .slide-level-content {
+        .slide-9-content,
+        .slide-level-content {
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
@@ -803,11 +833,13 @@
             text-transform: uppercase;
         }
 
-        .slide-8 h2 {
+        .slide-9 h2 {
+            color: #fff;
             margin-bottom: 1.5em;
         }
 
-        .slide-8 h4 {
+        .slide-9 h4 {
+            color: #fff;
             font-family: 'Feu', sans-serif;
             font-size: clamp(1.4rem, 3vw, 2.2rem);
             margin-bottom: 1.2em;
@@ -815,7 +847,7 @@
             font-weight: normal;
         }
 
-        .slide-8 ul {
+        .slide-9 ul {
             list-style: none;
             padding-left: 0;
             margin-bottom: 3em;
@@ -824,7 +856,7 @@
             width: auto;
         }
 
-        .slide-8 ul li {
+        .slide-9 ul li {
             position: relative;
             margin-bottom: 1em;
             padding-left: 1.5em;
@@ -832,7 +864,7 @@
             font-weight: normal;
         }
 
-        .slide-8 ul li::before {
+        .slide-9 ul li::before {
             content: "•";
             position: absolute;
             left: 0;
@@ -840,19 +872,20 @@
             font-weight: bold;
         }
 
-        .slide-8 .closing-statement {
+        .slide-9 .closing-statement {
             font-family: 'Poppins', sans-serif;
             font-weight: normal;
             font-size: clamp(1rem, 2vw, 1.3rem);
             margin-top: 2em;
         }
 
-        .slide-8 strong, .slide-8 .strong-text {
+        .slide-9 strong,
+        .slide-9 .strong-text {
             font-weight: 700;
             color: #FFD600;
         }
 
-        .slide-8 h2.main-title {
+        .slide-9 h2.main-title {
             margin-bottom: 0.5em;
             background-color: #00FF00;
             color: #000;
@@ -861,7 +894,7 @@
             text-transform: uppercase;
         }
 
-        .slide-8 .intro-text {
+        .slide-9 .intro-text {
             font-style: italic;
             margin-bottom: 3em;
             font-family: 'Poppins', sans-serif;
@@ -901,61 +934,10 @@
             margin-top: 3em;
             font-family: 'Poppins', sans-serif;
         }
-        .slide-9 {
-            background: #4393D0;
-            color: #000;
-            padding: 5% 6%;
-            text-align: center;
-        }
-
-        .slide-9-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .slide-9 h2 {
-            text-align: center;
-            margin-bottom: 1em;
-        }
-
-        .slide-9 .intro-text {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            margin-bottom: 2em;
-            line-height: 1.6;
-            color: #000;
-            font-weight: 500;
-        }
-
-        .slide-9 .intro-text strong {
-            font-weight: 700;
-            color: #000;
-        }
-
-        .slide-9 p {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            margin-bottom: 1.5em;
-            line-height: 1.6;
-        }
-
-        .slide-9 .callout {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-style: italic;
-            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
-            margin: 2.5em 0;
-            line-height: 1.5;
-        }
-
-        .slide-9 .callout .emoji {
-            font-style: normal;
-        }
 
         .slide-10 {
-            background: #010101;
-            color: #fff;
+            background: #4393D0;
+            color: #000;
             padding: 5% 6%;
             text-align: center;
         }
@@ -968,7 +950,21 @@
 
         .slide-10 h2 {
             text-align: center;
-            margin-bottom: 1.5em;
+            margin-bottom: 1em;
+        }
+
+        .slide-10 .intro-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 2em;
+            line-height: 1.6;
+            color: #000;
+            font-weight: 500;
+        }
+
+        .slide-10 .intro-text strong {
+            font-weight: 700;
+            color: #000;
         }
 
         .slide-10 p {
@@ -981,12 +977,50 @@
         .slide-10 .callout {
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
+            font-style: italic;
+            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+            margin: 2.5em 0;
+            line-height: 1.5;
+        }
+
+        .slide-10 .callout .emoji {
+            font-style: normal;
+        }
+
+        .slide-11 {
+            background: #010101;
+            color: #fff;
+            padding: 5% 6%;
+            text-align: center;
+        }
+
+        .slide-11-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .slide-11 h2 {
+            text-align: center;
+            margin-bottom: 1.5em;
+        }
+
+        .slide-11 p {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 1.5em;
+            line-height: 1.6;
+        }
+
+        .slide-11 .callout {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
             font-size: clamp(1.2rem, 2.5vw, 1.6rem);
             margin: 2.5em 0;
             line-height: 1.5;
         }
 
-        .slide-10 h4 {
+        .slide-11 h4 {
             font-family: 'Poppins', sans-serif;
             font-size: clamp(1.2rem, 2.5vw, 1.6rem);
             font-weight: 700;
@@ -994,7 +1028,7 @@
             font-style: italic;
         }
 
-        .slide-10 ul {
+        .slide-11 ul {
             list-style: none;
             padding-left: 0;
             margin-bottom: 2.5em;
@@ -1002,7 +1036,7 @@
             text-align: left;
         }
 
-        .slide-10 ul li {
+        .slide-11 ul li {
             position: relative;
             padding-left: 1.5em;
             margin-bottom: 0.8em;
@@ -1010,7 +1044,7 @@
             font-style: italic;
         }
 
-        .slide-10 ul li::before {
+        .slide-11 ul li::before {
             content: "•";
             position: absolute;
             left: 0;
@@ -1019,7 +1053,7 @@
             color: #fff;
         }
 
-        .slide-10 .contact-info {
+        .slide-11 .contact-info {
             font-family: 'Poppins', sans-serif;
             font-size: clamp(1rem, 2vw, 1.2rem);
             font-style: italic;
@@ -1027,22 +1061,22 @@
             margin-bottom: 2em;
         }
 
-        .slide-10 .contact-info p {
+        .slide-11 .contact-info p {
             margin-bottom: 0.5em;
         }
 
-        .slide-10 .contact-info span.emoji {
+        .slide-11 .contact-info span.emoji {
             font-style: normal;
             margin-right: 0.5em;
         }
 
-        .slide-10 .closing-statement {
+        .slide-11 .closing-statement {
             font-weight: 700;
             font-style: italic;
             font-size: clamp(1.1rem, 2.2vw, 1.4rem);
         }
 
-        .slide-10 strong {
+        .slide-11 strong {
             font-weight: 700;
         }
     </style>
@@ -1058,7 +1092,8 @@
         </div>
         <div class="slide-1-body">
             <h2>Who We Are</h2>
-            <p>Prosper XO is an artist-first ethical technology public benefit company and education-driven cultural initiative building digital and physical leverage for music labor.</p>
+            <p>Prosper XO is an artist-first ethical technology public benefit company and education-driven cultural
+                initiative building digital and physical leverage for music labor.</p>
             <p>Rooted in community and informed by academic collaboration, our work bridges:</p>
             <ul>
                 <li>Ethical technology development</li>
@@ -1068,8 +1103,10 @@
                 <li>Measurable economic impact</li>
                 <li>XO TV media production</li>
             </ul>
-            <p>This deck reflects what is already <strong>active and in motion</strong>, and how aligned <span class="highlight-yellow">sponsors</span> and <strong>partners can grow alongside it.</strong></p>
-            <p>What you'll see here is not theory, but a living, <strong>expanding cultural infrastructure</strong> model <strong>ready to scale with the right partners.</strong></p>
+            <p>This deck reflects what is already <strong>active and in motion</strong>, and how aligned <span
+                    class="highlight-yellow">sponsors</span> and <strong>partners can grow alongside it.</strong></p>
+            <p>What you'll see here is not theory, but a living, <strong>expanding cultural infrastructure</strong>
+                model <strong>ready to scale with the right partners.</strong></p>
         </div>
     </section>
 
@@ -1085,22 +1122,16 @@
             <div class="slide-2-top-text">
                 <h2>Why This Matters</h2>
                 <h4>Artists power culture, but the systems around them extract, exploit, and silence them.</h4>
-                <p>Music shapes identity, community, and local economies, yet the people who create it are often the least protected. Artists generate
-                    billions in cultural and economic value, while most independent musicians struggle to earn sustainable income. Mental health resources for
+                <p>Music shapes <strong></strong>identity, community, and local economies</strong>, yet the people who
+                    create it are often the least protected. <strong>Artists generate billions in cultural and economic
+                        value</strong>, while most independent musicians <strong>struggle to earn sustainable
+                        income</strong>. Mental health resources for
                     creatives remain underfunded. Data, labor, and intellectual property are controlled by platforms,
                     not creators, and the public has little visibility into how the industry truly operates.</p>
                 <h4>Prosper XO exists to change this through education, cultural infrastructure, and ethical technology
                 </h4>
             </div>
             <img class="photo" src="prosperxo-sponsorship-photo1.jpg" alt="">
-        </div>
-
-        <div class="slide-2-centered">
-            <h3>Why Sponsorship Matters Now</h3>
-            <h4>Prosper XO is intentionally building from the ground up.</h4>
-            <p>Our early programs. Town Halls, public education campaigns, media, surveys, and community dialogue, are
-                not
-                separate from our technology work. They are the foundation of it.</p>
         </div>
 
         <div class="slide-2-sponsors">
@@ -1118,66 +1149,6 @@
             </div>
         </div>
 
-        <div class="slide-2-centered">
-                <h3>What Early Sponsors Make Possible</h3>
-                <p>Early sponsorship is <strong><i>not</i></strong> <strong>passive support.</strong><br>
-                It is <strong>active participation</strong> in rebuilding the cultural economy.</p>
-                <p>Your investment directly fuels:</p>
-                <p><strong>Artist Storytelling &amp; Visibility</strong></p>
-                <ul>
-                    <li>XO TV media features spotlighting real artist journeys</li>
-                    <li><em>Unmuted</em> one-on-one podcast conversations with artists and industry leaders</li>
-                    <li><em>Unfiltered</em> short documentary artist series</li>
-                </ul>
-                <p><strong>Direct Artist Compensation</strong></p>
-                <ul>
-                    <li>Paying artists featured across our media platforms and events</li>
-                    <li>Fair compensation for guest speakers at our monthly Prosper XO Town Halls</li>
-                </ul>
-                <p><strong>Program Continuity &amp; Growth</strong></p>
-                <ul>
-                    <li>Sustaining our monthly Town Halls and public-facing cultural programming</li>
-                    <li>Expanding access to artist-first education and advocacy</li>
-                </ul>
-                <p><strong>The XO Team Powering the Ecosystem</strong></p>
-                <ul>
-                    <li>Fair pay for the creatives, producers, researchers, technologists, and organizers building this work</li>
-                    <li>Sustainable operational infrastructure to ensure long-term program quality and growth</li>
-                    <li>Ethical leadership and execution behind every activation, campaign, and pilot</li>
-                </ul>
-                <p><strong>Industry Transparency Campaigns</strong></p>
-                <ul>
-                    <li>Social campaigns that uplift industry truths</li>
-                    <li>Mission-aligned merch that amplifies artist advocacy and awareness</li>
-                </ul>
-                <p>Early sponsors are not funding content.<br>
-                They are funding <strong>equity, transparency, and infrastructure.</strong></p>
-        </div>
-
-        <div class="slide-2-centered">
-            <h3>What Partners Gain</h3>
-            <p><em>(Without Compromising Values)</em></p>
-            
-            <p><strong>Authentic Presence in Artist-Led Spaces</strong></p>
-            <p>Be embedded in trusted cultural environments</p>
-            
-            <p><strong>Measurable Community Reach &amp; Engagement</strong></p>
-            <p>Real attendance, participation, and verified engagement data, not vanity metrics.</p>
-            
-            <p><strong>Long-Term Brand Trust</strong></p>
-            <p>Sustained alignment with ethical innovation and artist empowerment.</p>
-            
-            <p><strong>Early Access to Ethical Technology Pilots</strong></p>
-            <p>Be first in line for responsible tech pilots that center transparency and community.</p>
-            
-            <p><strong>Cultural Relevance That Can't Be Bought Through Ads</strong></p>
-            <p>Participation in movements builds legacy. Ads build impressions.</p>
-        </div>
-
-        <div class="slide-2-centered">
-            <p>By supporting Prosper XO's early programs, sponsors help ensure the technology we build is humane,
-                ethical, and accountable to the people it serves.</p>
-        </div>
     </section>
 
     <!-- divider -->
@@ -1195,13 +1166,15 @@
             <div class="slide-3-card">
                 <img src="prosperxo-sponsorship-programs-townhalls.png" alt="Town Halls">
                 <h4 class="blue">Prosper XO Town Halls</h4>
-                <p><span class="highlight-blue">Monthly in-person gatherings</span> featuring artist-led conversations, mental health topics, education, and
+                <p><span class="highlight-blue">Monthly in-person gatherings</span> featuring artist-led conversations,
+                    mental health topics, education, and
                     advocacy.</p>
             </div>
             <div class="slide-3-card">
                 <img src="prosperxo-sponsorship-programs-newsletters.png" alt="Newsletter">
                 <h4 class="orange">XO Insider Newsletter</h4>
-                <p><span class="highlight-orange">~700</span> highly engaged subscribers receiving education, resources, and artist perspectives. Open Rate:
+                <p><span class="highlight-orange">~700</span> highly engaged subscribers receiving education, resources,
+                    and artist perspectives. Open Rate:
                     over <span class="highlight-orange">50%</span></p>
             </div>
             <div class="slide-3-card">
@@ -1222,6 +1195,7 @@
     <div
         style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);">
     </div>
+
 
     <!-- SLIDE 4 -->
     <section class="slide slide-4">
@@ -1256,7 +1230,9 @@
                 <div class="press-info">
                     <h4>NPR (National)</h4>
                     <p>The next battle for Austin's music scene is against the algorithms</p>
-                    <a class="read-link" href="https://www.npr.org/2025/11/08/nx-s1-5599528/the-next-battle-for-austins-music-scene-is-against-the-algorithms" target="_blank">Read Here →</a>
+                    <a class="read-link"
+                        href="https://www.npr.org/2025/11/08/nx-s1-5599528/the-next-battle-for-austins-music-scene-is-against-the-algorithms"
+                        target="_blank">Read Here →</a>
                 </div>
             </div>
             <div class="press-card">
@@ -1264,7 +1240,9 @@
                 <div class="press-info">
                     <h4>KUTX 98.9</h4>
                     <p>Prosper XO: Austin's music streaming alternative</p>
-                    <a class="read-link" href="https://www.kut.org/life-arts/2025-08-11/prosper-xo-austin-tx-music-streaming-lauren-bruno-spotify-alternative" target="_blank">Read Here →</a>
+                    <a class="read-link"
+                        href="https://www.kut.org/life-arts/2025-08-11/prosper-xo-austin-tx-music-streaming-lauren-bruno-spotify-alternative"
+                        target="_blank">Read Here →</a>
                 </div>
             </div>
             <div class="press-card">
@@ -1272,7 +1250,8 @@
                 <div class="press-info">
                     <h4>KOOP Radio 91.7fm · "People United"</h4>
                     <p>Live radio feature</p>
-                    <a class="read-link" href="https://archive.org/details/people-united-2026-02-06" target="_blank">Listen Here →</a>
+                    <a class="read-link" href="https://archive.org/details/people-united-2026-02-06"
+                        target="_blank">Listen Here →</a>
                 </div>
             </div>
             <div class="press-card">
@@ -1280,7 +1259,9 @@
                 <div class="press-info">
                     <h4>Pause/Play Podcast · Ft. CEO Lauren Bruno</h4>
                     <p>Streaming sucks: the good, the bad, and the future of music platforms</p>
-                    <a class="read-link" href="https://kutkutx.studio/pause-play/streaming-sucks-the-good-the-bad-and-the-future-of-music-platforms" target="_blank">Listen Here →</a>
+                    <a class="read-link"
+                        href="https://kutkutx.studio/pause-play/streaming-sucks-the-good-the-bad-and-the-future-of-music-platforms"
+                        target="_blank">Listen Here →</a>
                 </div>
             </div>
             <div class="press-card">
@@ -1288,7 +1269,8 @@
                 <div class="press-info">
                     <h4>Pause/Play Podcast · Ft. CMO Zeale &amp; Jonny Johnson</h4>
                     <p>AI and the future of music</p>
-                    <a class="read-link" href="https://kutkutx.studio/pause-play/ai-and-the-future-of-music" target="_blank">Listen Here →</a>
+                    <a class="read-link" href="https://kutkutx.studio/pause-play/ai-and-the-future-of-music"
+                        target="_blank">Listen Here →</a>
                 </div>
             </div>
             <div class="press-card">
@@ -1296,15 +1278,20 @@
                 <div class="press-info">
                     <h4>NPR Music · Amazon Music</h4>
                     <p>Pause/Play episode available on Amazon Music</p>
-                    <a class="read-link" href="https://music.amazon.com/podcasts/f5963ce5-c041-47bd-8d8c-82b8c218f64a/episodes/3feddf06-750e-497c-812e-45c6b0edd78b/pause-play-streaming-sucks-the-good-the-bad-and-the-future-of-music-platforms" target="_blank">Listen Here →</a>
+                    <a class="read-link"
+                        href="https://music.amazon.com/podcasts/f5963ce5-c041-47bd-8d8c-82b8c218f64a/episodes/3feddf06-750e-497c-812e-45c6b0edd78b/pause-play-streaming-sucks-the-good-the-bad-and-the-future-of-music-platforms"
+                        target="_blank">Listen Here →</a>
                 </div>
             </div>
             <div class="press-card">
                 <div class="press-img">HerTexas</div>
                 <div class="press-info">
                     <h4>HerTexas</h4>
-                    <p>Meet the Austin founder building a music streaming alternative that actually works for artists</p>
-                    <a class="read-link" href="https://hertexas.co/meet-the-austin-founder-building-a-music-streaming-alternative-that-actually-works-for-artists/" target="_blank">Read Here →</a>
+                    <p>Meet the Austin founder building a music streaming alternative that actually works for artists
+                    </p>
+                    <a class="read-link"
+                        href="https://hertexas.co/meet-the-austin-founder-building-a-music-streaming-alternative-that-actually-works-for-artists/"
+                        target="_blank">Read Here →</a>
                 </div>
             </div>
             <div class="press-card">
@@ -1312,7 +1299,9 @@
                 <div class="press-info">
                     <h4>Heaven's Metal Magazine</h4>
                     <p>Prosper XO launches bold campaign to reimagine the music industry from the ground up</p>
-                    <a class="read-link" href="https://heavensmetalmagazine.com/index.php/2025/05/26/news-prosper-xo-launches-bold-campaign-to-reimagine-the-music-industry-from-the-ground-up/" target="_blank">Read Here →</a>
+                    <a class="read-link"
+                        href="https://heavensmetalmagazine.com/index.php/2025/05/26/news-prosper-xo-launches-bold-campaign-to-reimagine-the-music-industry-from-the-ground-up/"
+                        target="_blank">Read Here →</a>
                 </div>
             </div>
             <div class="press-card">
@@ -1320,7 +1309,9 @@
                 <div class="press-info">
                     <h4>Voyage Austin</h4>
                     <p>Life &amp; work with Lauren Bruno of Austin</p>
-                    <a class="read-link" href="https://voyageaustin.com/interview/life-work-with-lauren-bruno-of-austin/" target="_blank">Read Here →</a>
+                    <a class="read-link"
+                        href="https://voyageaustin.com/interview/life-work-with-lauren-bruno-of-austin/"
+                        target="_blank">Read Here →</a>
                 </div>
             </div>
             <div class="press-card">
@@ -1328,7 +1319,9 @@
                 <div class="press-info">
                     <h4>Austin Music People Podcast</h4>
                     <p>Ft. Lauren Bruno, Sue Zoch, Gabe Phoenix &amp; Terrany Johnson</p>
-                    <a class="read-link" href="https://austinmusicpeople.podbean.com/e/18-prosper-xo-lauren-bruno-sue-zoch-gabe-phoenix-terrany-johnson/" target="_blank">Listen Here →</a>
+                    <a class="read-link"
+                        href="https://austinmusicpeople.podbean.com/e/18-prosper-xo-lauren-bruno-sue-zoch-gabe-phoenix-terrany-johnson/"
+                        target="_blank">Listen Here →</a>
                 </div>
             </div>
             <div class="press-card">
@@ -1336,7 +1329,8 @@
                 <div class="press-info">
                     <h4>The Austin Common</h4>
                     <p>Prosper XO community profile</p>
-                    <a class="read-link" href="https://theaustincommon.com/organizer/prosper-xo/" target="_blank">Read Here →</a>
+                    <a class="read-link" href="https://theaustincommon.com/organizer/prosper-xo/" target="_blank">Read
+                        Here →</a>
                 </div>
             </div>
             <div class="press-card">
@@ -1344,7 +1338,9 @@
                 <div class="press-info">
                     <h4>Medium</h4>
                     <p>The hidden cost of exposure: how SXSW and streaming platforms exploit artist data</p>
-                    <a class="read-link" href="https://medium.com/@lauren_33237/the-hidden-cost-of-exposure-how-sxsw-and-streaming-platforms-exploit-artist-data-c69ba1781288" target="_blank">Read Here →</a>
+                    <a class="read-link"
+                        href="https://medium.com/@lauren_33237/the-hidden-cost-of-exposure-how-sxsw-and-streaming-platforms-exploit-artist-data-c69ba1781288"
+                        target="_blank">Read Here →</a>
                 </div>
             </div>
             <div class="press-card">
@@ -1352,13 +1348,15 @@
                 <div class="press-info">
                     <h4>Kera News</h4>
                     <p>Feature by Abigail Breyfogle</p>
-                    <a class="read-link" href="https://www.keranews.org/abigail-breyfogle-kut" target="_blank">Read Here →</a>
+                    <a class="read-link" href="https://www.keranews.org/abigail-breyfogle-kut" target="_blank">Read Here
+                        →</a>
                 </div>
             </div>
         </div>
 
         <div class="press-quotes">
-            <blockquote>"A new Austin startup hopes to bring an artist-centric model…by connecting musicians with sponsors and giving them better access to their data."</blockquote>
+            <blockquote>"A new Austin startup hopes to bring an artist-centric model…by connecting musicians with
+                sponsors and giving them better access to their data."</blockquote>
             <cite>— Abigail Breyfogle, KUT Pause/Play Podcast</cite>
 
             <blockquote>"It's more than a platform; it's an ecosystem."</blockquote>
@@ -1374,29 +1372,37 @@
     <!-- SLIDE 6 -->
     <section class="slide slide-6">
         <h2>Momentum, Reach &amp; Data Snapshot</h2>
-        
+
         <div class="slide-6-content">
             <p class="callout">Unusually Strong Early Engagement for a Pre-Product Platform</p>
-            <p class="quote">"Highly engaged Gen Z and Millennial creatives, local tastemakers, and ethical consumers"</p>
+            <p class="quote">"Highly engaged Gen Z and Millennial creatives, local tastemakers, and ethical consumers"
+            </p>
 
             <h3>90-Day Performance Snapshot</h3>
             <ul>
                 <li><span class="strong-text">11K page views / 3.3K users (GA4) (This is organic)</span></li>
-                <li>Traffic driven by NPR/KUT coverage and sustained by <span class="strong-text">organic discovery</span></li>
+                <li>Traffic driven by NPR/KUT coverage and sustained by <span class="strong-text">organic
+                        discovery</span></li>
                 <li><span class="strong-text">357 event RSVPs</span></li>
                 <li><span class="strong-text">205 speakers</span> across Town Halls and cultural activations</li>
-                <li><span class="strong-text">300 survey respondents</span> across artists, fans, brands, and venues</li>
-                <li>One of the <span class="strong-text">largest independent music-ecosystem datasets in Austin</span></li>
+                <li><span class="strong-text">300 survey respondents</span> across artists, fans, brands, and venues
+                </li>
+                <li>One of the <span class="strong-text">largest independent music-ecosystem datasets in Austin</span>
+                </li>
             </ul>
 
             <h3>Geographic Reach</h3>
             <ul>
-                <li><span class="strong-text">Top Countries:</span> United States, United Kingdom, India, Brazil, Mexico, France, Germany, Canada, Australia</li>
-                <li><span class="strong-text">Top U.S. Cities:</span> Austin, Los Angeles, New York, Chicago, Houston, Dallas</li>
-                <li><span class="strong-text">Top International Cities:</span> London, Berlin, Mexico City, São Paulo, Toronto</li>
+                <li><span class="strong-text">Top Countries:</span> United States, United Kingdom, India, Brazil,
+                    Mexico, France, Germany, Canada, Australia</li>
+                <li><span class="strong-text">Top U.S. Cities:</span> Austin, Los Angeles, New York, Chicago, Houston,
+                    Dallas</li>
+                <li><span class="strong-text">Top International Cities:</span> London, Berlin, Mexico City, São Paulo,
+                    Toronto</li>
             </ul>
 
-            <p class="closing-statement">This depth of trust, participation, and global discovery is rare at this stage.</p>
+            <p class="closing-statement">This depth of trust, participation, and global discovery is rare at this stage.
+            </p>
         </div>
     </section>
 
@@ -1405,36 +1411,25 @@
         style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);">
     </div>
 
-    <!-- SLIDE 7 -->
+     <!-- SLIDE 7 -->
     <section class="slide slide-7">
         <h2>What We're Working On</h2>
-        
+
         <div class="slide-7-content">
             <h3 class="section-title">In Production</h3>
 
             <ul>
                 <li><span class="strong-text">UNMUTED Podcast:</span> 2 episodes filmed</li>
-                <li><span class="strong-text">Unfiltered Artist + Industry Video Series:</span> 2 episodes filmed <span class="yellow-highlight">(PUT LOGOS ON THIS PAGE)</span></li>
-                <li><span class="strong-text">XO Insider Blog:</span> op-eds, interviews, research highlights, and cultural policy breakdowns (maybe put screenshot of blog design or attach it to full deck)</li>
-                <li><span class="strong-text">XOtV-</span> A Modern Public-Access, Inspired Cultural Channel <span class="yellow-highlight">(PUT LOGOS on this page)</span></li>
-                <li><span class="strong-text">SXSW</span> city-wide <span class="strong-text">public education campaign</span></li>
-                <li><span class="strong-text">"Power to the Creator"</span> Educational Merch Drop <span class="yellow-highlight">(Include merch photos)</span></li>
-            </ul>
-
-            <div class="divider-line"></div>
-
-            <h3 class="section-title">The Technology (In Development)</h3>
-            <p class="intro">Prosper XO is building artist-first technology that connects <span class="strong-text">real-world culture to measurable impact</span>, without extraction.</p>
-
-            <h4>Our Approach</h4>
-            <p style="margin-bottom: 2em;">Technology development will remain <span class="strong-text">artist-led, opt-in, and values-aligned</span>, designed with communities, not imposed on them.</p>
-
-            <h4>Early Sponsors Become First-Look Partners For:</h4>
-            <ul>
-                <li>Pilot programs &amp; live activations</li>
-                <li>Beta access to Prosper Portals &amp; engagement tools</li>
-                <li>Ethical brand integrations designed alongside artists</li>
-                <li>Long-term Prosper Partner status as the platform scales</li>
+                <li><span class="strong-text">Unfiltered Artist + Industry Video Series:</span> 2 episodes filmed <span
+                        class="yellow-highlight">(PUT LOGOS ON THIS PAGE)</span></li>
+                <li><span class="strong-text">XO Insider Blog:</span> op-eds, interviews, research highlights, and
+                    cultural policy breakdowns (maybe put screenshot of blog design or attach it to full deck)</li>
+                <li><span class="strong-text">XOtV-</span> A Modern Public-Access, Inspired Cultural Channel <span
+                        class="yellow-highlight">(PUT LOGOS on this page)</span></li>
+                <li><span class="strong-text">SXSW</span> city-wide <span class="strong-text">public education
+                        campaign</span></li>
+                <li><span class="strong-text">"Power to the Creator"</span> Educational Merch Drop <span
+                        class="yellow-highlight">(Include merch photos)</span></li>
             </ul>
         </div>
     </section>
@@ -1446,9 +1441,81 @@
 
     <!-- SLIDE 8 -->
     <section class="slide slide-8">
+
+        <div class="slide-2-centered">
+            <h3>What Early Sponsors Make Possible</h3>
+            <p>Early sponsorship is <strong><i>not</i></strong> <strong>passive support.</strong><br>
+                It is <strong>active participation</strong> in rebuilding the cultural economy.</p>
+            <p>Your investment directly fuels:</p>
+            <p><strong>Artist Storytelling &amp; Visibility</strong></p>
+            <ul>
+                <li>XO TV media features spotlighting real artist journeys</li>
+                <li><em>Unmuted</em> one-on-one podcast conversations with artists and industry leaders</li>
+                <li><em>Unfiltered</em> short documentary artist series</li>
+            </ul>
+            <p><strong>Direct Artist Compensation</strong></p>
+            <ul>
+                <li>Paying artists featured across our media platforms and events</li>
+                <li>Fair compensation for guest speakers at our monthly Prosper XO Town Halls</li>
+            </ul>
+            <p><strong>Program Continuity &amp; Growth</strong></p>
+            <ul>
+                <li>Sustaining our monthly Town Halls and public-facing cultural programming</li>
+                <li>Expanding access to artist-first education and advocacy</li>
+            </ul>
+            <p><strong>The XO Team Powering the Ecosystem</strong></p>
+            <ul>
+                <li>Fair pay for the creatives, producers, researchers, technologists, and organizers building this work
+                </li>
+                <li>Sustainable operational infrastructure to ensure long-term program quality and growth</li>
+                <li>Ethical leadership and execution behind every activation, campaign, and pilot</li>
+            </ul>
+            <p><strong>Industry Transparency Campaigns</strong></p>
+            <ul>
+                <li>Social campaigns that uplift industry truths</li>
+                <li>Mission-aligned merch that amplifies artist advocacy and awareness</li>
+            </ul>
+            <p>Early sponsors are not funding content.<br>
+                They are funding <strong>equity, transparency, and infrastructure.</strong></p>
+        </div>
+
+        <div class="slide-2-centered">
+            <h3>What Partners Gain</h3>
+            <p><em>(Without Compromising Values)</em></p>
+
+            <p><strong>Authentic Presence in Artist-Led Spaces</strong></p>
+            <p>Be embedded in trusted cultural environments</p>
+
+            <p><strong>Measurable Community Reach &amp; Engagement</strong></p>
+            <p>Real attendance, participation, and verified engagement data, not vanity metrics.</p>
+
+            <p><strong>Long-Term Brand Trust</strong></p>
+            <p>Sustained alignment with ethical innovation and artist empowerment.</p>
+
+            <p><strong>Early Access to Ethical Technology Pilots</strong></p>
+            <p>Be first in line for responsible tech pilots that center transparency and community.</p>
+
+            <p><strong>Cultural Relevance That Can't Be Bought Through Ads</strong></p>
+            <p>Participation in movements builds legacy. Ads build impressions.</p>
+        </div>
+
+        <div class="slide-2-centered">
+            <p>By supporting Prosper XO's early programs, sponsors help ensure the technology we build is humane,
+                ethical, and accountable to the people it serves.</p>
+        </div>
+    </section>
+
+    <!-- divider -->
+    <div
+        style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);">
+    </div>
+
+
+    <!-- SLIDE 9 -->
+    <section class="slide slide-9">
         <h2>How Sponsors Can Participate</h2>
-        
-        <div class="slide-8-content">
+
+        <div class="slide-9-content">
             <h4>Sponsors may support:</h4>
             <ul>
                 <li>Everything we do</li>
@@ -1458,14 +1525,15 @@
                 <li>Technology pilots</li>
             </ul>
 
-            <p class="closing-statement"><span class="strong-text">We intentionally offer flexible entry points</span>, from grassroots support to founding partnership.</p>
+            <p class="closing-statement"><span class="strong-text">We intentionally offer flexible entry points</span>,
+                from grassroots support to founding partnership.</p>
         </div>
 
         <div class="slide-level-content" style="margin-top: 6em;">
             <div style="text-align: center;">
                 <h2>Sponsorship Levels</h2>
             </div>
-            
+
             <p class="intro-text">
                 Prosper XO sponsorship is designed as a pathway into the community, not a transaction.<br>
                 Partners may enter at any level and deepen involvement over time.
@@ -1475,9 +1543,11 @@
                 <h3 class="level-title">Promotional &amp; In-Kind Community Partner</h3>
                 <p class="level-price">$0–$5,000 value (product, food, drink, gift cards, services etc)</p>
                 <p class="level-subtitle">A way to show up physically for artists and the community.</p>
-                
+
                 <p class="level-desc">
-                    This level is for brands and local businesses who want to <strong>support artists in real-world, tangible ways</strong>, by nourishing, resourcing, and caring for the community during Prosper XO programs and events.
+                    This level is for brands and local businesses who want to <strong>support artists in real-world,
+                        tangible ways</strong>, by nourishing, resourcing, and caring for the community during Prosper
+                    XO programs and events.
                 </p>
 
                 <p class="level-list-title">Ideal for:</p>
@@ -1511,9 +1581,10 @@
                 <h3 class="level-title">✨ Friends of Prosper XO</h3>
                 <p class="level-price">$500–$1,500</p>
                 <p class="level-subtitle">A meaningful way to stand with artists, education, and ethical culture.</p>
-                
+
                 <p class="level-desc">
-                    This level is for individuals, small businesses, and values-aligned brands who want to participate in the movement and help sustain artist-led education and public culture.
+                    This level is for individuals, small businesses, and values-aligned brands who want to participate
+                    in the movement and help sustain artist-led education and public culture.
                 </p>
 
                 <p class="level-list-title">Includes:</p>
@@ -1537,9 +1608,10 @@
                 <h3 class="level-title">🌱 Community Partner</h3>
                 <p class="level-price">$5,000</p>
                 <p class="level-subtitle">A visible commitment to artist sustainability and ethical culture.</p>
-                
+
                 <p class="level-desc">
-                    Community Partners publicly align with Prosper XO's mission and help ensure our education, advocacy, and community programming remains accessible and artist-first.
+                    Community Partners publicly align with Prosper XO's mission and help ensure our education, advocacy,
+                    and community programming remains accessible and artist-first.
                 </p>
 
                 <p class="level-list-title">Includes:</p>
@@ -1555,7 +1627,7 @@
                 <h3 class="level-title">🌿 Program Partner</h3>
                 <p class="level-price">$10,000–$15,000</p>
                 <p class="level-subtitle">Support a specific program with clear, tangible impact.</p>
-                
+
                 <p class="level-desc">
                     Program Partners sponsor one core Prosper XO initiative and directly enable its success.
                 </p>
@@ -1581,9 +1653,10 @@
                 <h3 class="level-title">🌳 Cultural Partner</h3>
                 <p class="level-price">$25,000</p>
                 <p class="level-subtitle">Help shape the cultural conversation.</p>
-                
+
                 <p class="level-desc">
-                    Cultural Partners support multiple Prosper XO initiatives and play a visible role in expanding our public education, media, and cultural reach.
+                    Cultural Partners support multiple Prosper XO initiatives and play a visible role in expanding our
+                    public education, media, and cultural reach.
                 </p>
 
                 <p class="level-list-title">Includes:</p>
@@ -1600,9 +1673,10 @@
                 <h3 class="level-title">🌈 Founding Prosper Partner</h3>
                 <p class="level-price">$50,000+</p>
                 <p class="level-subtitle">Build the future alongside us.</p>
-                
+
                 <p class="level-desc">
-                    Founding Prosper Partners are foundational collaborators, helping shape Prosper XO's long-term impact, ethical technology, and creative infrastructure.
+                    Founding Prosper Partners are foundational collaborators, helping shape Prosper XO's long-term
+                    impact, ethical technology, and creative infrastructure.
                 </p>
 
                 <p class="level-list-title">Includes:</p>
@@ -1616,35 +1690,8 @@
                 </ul>
             </div>
 
-            <p class="footer-note">Many partners begin at one level and deepen their involvement over time as the work grows.</p>
-        </div>
-    </section>
-
-    <!-- divider -->
-    <div
-        style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);">
-    </div>
-    <!-- SLIDE 9 -->
-    <section class="slide slide-9">
-        <h2>For Investors &amp; Strategic Partners</h2>
-        
-        <div class="slide-9-content">
-            <p class="intro-text">
-                <strong>Sponsors</strong> support Prosper XO through brand alignment and community participation.<br>
-                <strong>Investors</strong> engage through equity and long-term value creation.
-            </p>
-
-            <p class="intro-text">
-                <strong>Prosper XO is inviting a small group of early Prosper Partners and mission-aligned investors to help shape the future of ethical culture, education, and technology.</strong>
-            </p>
-
-            <p>
-                We are building long-term creative economy infrastructure, not a quick-flip company, grounded in <strong>artist-first values, real-world engagement, and defensible first-party data.</strong>
-            </p>
-
-            <p class="callout">
-                <span class="emoji">👉</span> If you're interested in learning more about Prosper XO's technology, or investment opportunities, we'd love to start a conversation.
-            </p>
+            <p class="footer-note">Many partners begin at one level and deepen their involvement over time as the work
+                grows.</p>
         </div>
     </section>
 
@@ -1654,29 +1701,63 @@
     </div>
     <!-- SLIDE 10 -->
     <section class="slide slide-10">
-        <h2>LET'S BUILD THIS TOGETHER</h2>
-        
-        <div class="slide-10-content">
+        <h2>For Investors &amp; Strategic Partners</h2>
 
-            <p>
-                Prosper XO is building something rare:<br>
-                <strong>a cultural ecosystem where artists are supported, communities are strengthened, and technology is designed with care instead of extraction.</strong>
+        <div class="slide-10-content">
+            <p class="intro-text">
+                <strong>Sponsors</strong> support Prosper XO through brand alignment and community participation.<br>
+                <strong>Investors</strong> engage through equity and long-term value creation.
+            </p>
+
+            <p class="intro-text">
+                <strong>Prosper XO is inviting a small group of early Prosper Partners and mission-aligned investors to
+                    help shape the future of ethical culture, education, and technology.</strong>
             </p>
 
             <p>
-                Our education programs, public conversations, and community-led initiatives are not side projects, they are the foundation of an ethical creative economy we are building together.
+                We are building long-term creative economy infrastructure, not a quick-flip company, grounded in
+                <strong>artist-first values, real-world engagement, and defensible first-party data.</strong>
+            </p>
+
+            <p class="callout">
+                <span class="emoji">👉</span> If you're interested in learning more about Prosper XO's technology, or
+                investment opportunities, we'd love to start a conversation.
+            </p>
+        </div>
+    </section>
+
+    <!-- divider -->
+    <div
+        style="width:100%;height:20px;background:linear-gradient(to right,#ff0066,#ff3399,#ff66cc,#ffcc00,#ccff00,#66cc33,#33cccc,#3399ff,#33cccc);">
+    </div>
+    <!-- SLIDE 11 -->
+    <section class="slide slide-11">
+        <h2>LET'S BUILD THIS TOGETHER</h2>
+
+        <div class="slide-11-content">
+
+            <p>
+                Prosper XO is building something rare:<br>
+                <strong>a cultural ecosystem where artists are supported, communities are strengthened, and technology
+                    is designed with care instead of extraction.</strong>
+            </p>
+
+            <p>
+                Our education programs, public conversations, and community-led initiatives are not side projects, they
+                are the foundation of an ethical creative economy we are building together.
             </p>
 
             <div class="callout">
                 We are inviting you to anchor the ethical infrastructure of the future creative economy.<br>
-                The music industry is shifting. The next era will be defined by transparency, artist ownership, and community-led growth. Prosper XO is already leading that conversation in Austin and beyond.
+                The music industry is shifting. The next era will be defined by transparency, artist ownership, and
+                community-led growth. Prosper XO is already leading that conversation in Austin and beyond.
             </div>
 
             <p>Let's discuss how your brand can champion the creators who power culture.</p>
 
             <p>
                 <strong>When artists prosper, culture thrives.<br>
-                And when culture thrives, everyone benefits.</strong>
+                    And when culture thrives, everyone benefits.</strong>
             </p>
 
             <h4>Next Steps</h4>
