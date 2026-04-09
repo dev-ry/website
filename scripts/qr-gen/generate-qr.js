@@ -23,6 +23,16 @@ const campaigns = [
     url: "https://www.prosperxo.com?utm_source=wheatpaste&utm_medium=poster&utm_campaign=sxsw2026&utm_content=future_dx4",
     description: "SXSW 2026 - Future (DX4)",
   },
+  {
+    name: "sxsw2026-data",
+    url: "https://www.prosperxo.com?utm_source=wheatpaste&utm_medium=poster&utm_campaign=sxsw2026&utm_content=data_dx5",
+    description: "SXSW 2026 - Data (DX5)",
+  },
+  {
+    name: "sxsw2026-industry",
+    url: "https://www.prosperxo.com?utm_source=wheatpaste&utm_medium=poster&utm_campaign=sxsw2026&utm_content=industry_dx6",
+    description: "SXSW 2026 - Industry (DX6)",
+  },
 ];
 
 const outputDir = path.join(__dirname, "../../assets/graphics/qr-codes");
